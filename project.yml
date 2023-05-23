@@ -1,0 +1,73 @@
+---
+settings:
+  name: On-premises ONTAP clusters
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
+sidebar:
+  entries:
+  - title: Documentazione sul cluster ONTAP on-premise
+    url: "/index.html"
+  - title: Note di rilascio
+    entries:
+    - title: Novità
+      url: "/whats-new.html"
+    - title: Limitazioni note
+      url: "/reference-limitations.html"
+  - title: Inizia subito
+    entries:
+    - title: Scopri di più sulla gestione dei cluster ONTAP on-premise
+      url: "/concept-onprem-ontap.html"
+    - title: Scopri i cluster ONTAP
+      url: "/task-discovering-ontap.html"
+  - title: Gestire cluster ONTAP on-premise
+    entries:
+    - title: Gestire i cluster rilevati direttamente
+      url: "/task-manage-ontap-direct.html"
+    - title: Gestire i cluster rilevati con un connettore
+      url: "/task-manage-ontap-connector.html"
+    - title: Visualizzare le informazioni sul cluster e i dettagli del contratto
+      url: "/task-view-cluster-info.html"
+    - title: Ottimizza i cluster con Digital Advisor
+      url: "/concept-aiq-digital-advisor.html"
+    - title: Rimuovere un ambiente di lavoro ONTAP on-premise
+      url: "/task-remove-on-prem.html"
+  - title: Conoscenza e supporto
+    entries:
+    - title: Registrati per ricevere assistenza
+      url: "/task-support-registration.html"
+    - title: Richiedi assistenza
+      url: "/task-get-help.html"
+  - title: Note legali
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Inizia subito
+    links:
+    - title: Scopri di più sulla gestione dei cluster ONTAP on-premise
+      url: concept-onprem-ontap.html
+    - title: Scopri i cluster ONTAP
+      url: task-discovering-ontap.html
+  - title: Gestire cluster ONTAP on-premise
+    links:
+    - title: Gestire i cluster rilevati direttamente
+      url: task-manage-ontap-direct.html
+    - title: Gestire i cluster rilevati con un connettore
+      url: task-manage-ontap-connector.html
+  - title: Blog e community
+    links:
+    - title: Community NetApp
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: Blog BlueXP
+      url: https://cloud.netapp.com/blog
+    - title: Webinar sul cloud
+      url: https://cloud.netapp.com/events
+product-family:
+  name: BlueXP
+  repo: cloud-manager-family
+  sidebar_label: Tutta la documentazione BlueXP

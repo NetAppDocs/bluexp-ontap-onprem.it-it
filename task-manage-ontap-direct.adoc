@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-manage-ontap-direct.html 
+keywords: direct discovery, direct, system manager, local, local discovery 
+summary: 'Se il cluster ONTAP on-premise è stato rilevato direttamente senza utilizzare un connettore, è possibile accedere all"ambiente di lavoro per gestire il cluster utilizzando Gestione di sistema.' 
+---
+= Gestire i cluster ONTAP on-premise rilevati direttamente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se il cluster ONTAP on-premise è stato rilevato direttamente senza utilizzare un connettore, è possibile aprire l'ambiente di lavoro per gestire il cluster utilizzando Gestione sistema.
+
+.Requisito
+Il computer utilizzato per accedere alla console BlueXP deve disporre di una connessione di rete al cluster ONTAP on-premise, simile a quella utilizzata per fornire connessioni ad altre risorse della rete privata.
+
+.Limitazioni
+Alcune funzionalità di System Manager non sono supportate da BlueXP.
+
+link:reference-limitations.html["Esaminare l'elenco delle limitazioni"].
+
+.Fasi
+. Nella pagina Canvas, fare doppio clic sul nome di un ambiente di lavoro ONTAP on-premise.
++
+L'icona dell'ambiente di lavoro identifica i cluster rilevati direttamente:
+
++
+image:screenshot-direct-discovery-we.png["Una schermata dell'icona dell'ambiente di lavoro che viene visualizzata in Canvas"]
+
+. Se richiesto, inserire le credenziali ONTAP.
++
+Se non si salvano le credenziali, viene richiesto di accedere con le credenziali ONTAP ogni volta che si apre l'ambiente di lavoro. È possibile salvare le credenziali in modo che non sia necessario inserirle ogni volta. Se si utilizza questa opzione, le credenziali vengono associate solo all'utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nel tuo account.
+
++
+image:screenshot-credentials.png["Una schermata che mostra la richiesta di inserire il nome utente e la password per un cluster ONTAP."]
+
+. Utilizzare Gestione sistema per gestire ONTAP.
++
+Per assistenza sull'utilizzo di Gestione di sistema con ONTAP, consultare la sezione https://docs.netapp.com/us-en/ontap/index.html["Documentazione ONTAP"^] per istruzioni dettagliate. Di seguito sono riportati alcuni link utili:
+
++
+** https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html["Gestione di volumi e LUN"^]
+** https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html["Gestione della rete"^]
+** https://docs.netapp.com/us-en/ontap/concept_dp_overview.html["Protezione dei dati"^]
+
+
+

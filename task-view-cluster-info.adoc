@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: task-view-cluster-info.html 
+keywords: software contract, hardware contract, contracts, expiration date, expired, software contract 
+summary: Il portafoglio digitale BlueXP consente di visualizzare i dettagli del contratto per ciascuno dei cluster ONTAP on-premise. Se non hai ancora scoperto un cluster in BlueXP, puoi farlo anche dal portafoglio digitale. 
+---
+= Visualizzare le informazioni sul cluster e i dettagli del contratto
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il portafoglio digitale BlueXP consente di visualizzare i dettagli del contratto per ciascuno dei cluster ONTAP on-premise. Se non hai ancora scoperto un cluster in BlueXP, puoi farlo anche dal portafoglio digitale.
+
+.Prima di iniziare
+Il portafoglio digitale BlueXP visualizza i dettagli sui cluster ONTAP on-premise rilevati come ambiente di lavoro o associati a un account del sito di supporto NetApp aggiunto a BlueXP.
+
+.Fasi
+. Dal menu di navigazione di BlueXP, selezionare *Governance > Digital wallet*.
+. Selezionare *ONTAP on-premise*.
++
+Se viene richiesto di inserire prima le credenziali dell'account NetApp Support Site (NSS), immetterle nel Support Dashboard. Dopo aver aggiunto l'account, vengono visualizzati i cluster inclusi in tale account.
+
++
+Le date di scadenza del contratto software e del contratto hardware vengono visualizzate sulla riga per ciascun cluster.
+
++
+image:screenshot_digital_wallet_onprem_main.png["Una schermata che mostra l'espansione dei dettagli del cluster in modo da poter visualizzare le informazioni sulla licenza del cluster."]
+
+. Se non hai ancora rilevato un cluster come ambiente di lavoro, seleziona *Discover* e segui le istruzioni.
++
+Una volta individuato un cluster, è disponibile come ambiente di lavoro in BlueXP per consentirne la gestione.
+
+
+
+.Link correlato
+https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-on-prem-clusters.html["Scopri di più sulla gestione delle licenze per cluster ONTAP on-premise dal portafoglio digitale BlueXP"^]

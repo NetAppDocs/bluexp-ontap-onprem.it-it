@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: concept-aiq-digital-advisor.html 
+keywords: concepts, active iq digital advisor, ontap 
+summary: BlueXP Digital Advisor consente di ottimizzare le operazioni, la sicurezza e le performance dei cluster ONTAP. 
+---
+= Ottimizza i cluster utilizzando BlueXP Digital Advisor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP Digital Advisor consente di ottimizzare le operazioni, la sicurezza e le performance dei cluster ONTAP.
+
+
+
+== Caratteristiche
+
+Puoi visualizzare lo stato generale del tuo sistema storage, informazioni di alto livello sullo stato di salute del sistema, inventario, pianificazione, aggiornamenti e preziose informazioni a livello di elenco di controllo utilizzando BlueXP Digital Advisor.
+
+* Analizzare e ottimizzare lo stato dei sistemi storage
+* Ottieni informazioni su tutti i rischi per i tuoi sistemi storage e sulle azioni per mitigarne i rischi
+* Analizza le performance dei tuoi dispositivi di storage visualizzando il formato grafico dei dati delle performance
+* Scopri i dettagli sui sistemi che hanno superato il 90% di capacità o stanno per arrivare al 90% di capacità
+* Ottieni informazioni su hardware e software scaduti o prossimi alla scadenza entro i prossimi 6 mesi
+* Aggiorna il software del sistema di storage e aggiorna il firmware ONTAP utilizzando Ansible
+
+
+
+
+== Sistemi ONTAP supportati
+
+Digital Advisor fornisce informazioni su tutti i sistemi ONTAP on-premise e i sistemi Cloud Volumes ONTAP associati al tuo account NetApp Support Site (NSS).
+
+
+
+== Ulteriori informazioni
+
+https://docs.netapp.com/us-en/active-iq/digital-advisor-integration-with-bluexp.html["Documentazione di Digital Advisor"^]

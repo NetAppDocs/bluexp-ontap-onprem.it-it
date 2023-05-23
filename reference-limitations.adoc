@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, system manager, unsupported features 
+summary: Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni. 
+---
+= Limitazioni note
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le limitazioni note identificano piattaforme, dispositivi o funzioni non supportate da questa versione del prodotto o che non interagiscono correttamente con esso. Esaminare attentamente queste limitazioni.
+
+
+
+== Cluster non supportati
+
+I cluster ONTAP on-premise configurati con autenticazione SAML non sono supportati con BlueXP.
+
+
+
+== Limitazioni di System Manager
+
+Le seguenti funzionalità di System Manager non sono supportate da BlueXP:
+
+* Configurazione del cluster
++
+Dopo aver impostato l'indirizzo IP di gestione e configurato la password admin su un cluster ONTAP on-premise, è possibile individuare il cluster in BlueXP.
+
+* Controllo degli accessi in base al ruolo (solo connettore)
++
+Il controllo degli accessi basato sui ruoli da Gestione di sistema non è supportato quando si scopre e gestisce un cluster ONTAP on-premise utilizzando un connettore. Viene richiesto di inserire le credenziali di amministratore durante il processo di rilevamento. Queste credenziali vengono utilizzate per tutte le azioni eseguite da System Manager.
+
++
+Con l'opzione di rilevamento diretto, viene richiesto di accedere con le credenziali ONTAP ogni volta che si apre l'ambiente di lavoro.
+
+* Attivazione di backup e ripristino BlueXP (Cloud Backup)
++
+La versione del cluster deve essere 9.13.1 per abilitare il backup e il ripristino BlueXP da System Manager.
+
++
+Se hai _non_ individuato un cluster utilizzando un connettore, non puoi utilizzare System Manager (vista avanzata) per abilitare il backup e il ripristino. Tuttavia, è possibile abilitare il backup e il ripristino su un cluster on-premise direttamente da BlueXP. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Scopri come iniziare"^]
+
+* Aggiornamenti on-demand
++
+Gli aggiornamenti on-demand del firmware e del software non sono disponibili se la versione del cluster è ONTAP 9.9.1 o precedente.
+
++
+Se non si dispone di un connettore, non è possibile eseguire aggiornamenti dal computer locale, solo da un server a cui è possibile accedere utilizzando BlueXP.
+
+* Ricerca globale
+* Impostazioni dell'interfaccia utente
+
