@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Gestire i cluster ONTAP on-premise rilevati con un connettore | NetApp Documentation</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Gestire i cluster ONTAP on-premise rilevati con un connettore | NetApp Documentation" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+	<meta property="og:description" content="Se è necessario eseguire una gestione avanzata di un cluster ONTAP on-premise, è possibile farlo utilizzando Gestione di sistema di ONTAP, un"interfaccia di ..." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Se è necessario eseguire una gestione avanzata di un cluster ONTAP on-premise, è possibile farlo utilizzando Gestione di sistema di ONTAP, un"interfaccia di ...">
+  <meta name="keywords" content=" system manager, advanced view, access system manager, load system manager, use system manager"><!-- Icons -->
+  <link rel="icon" href="/it-it/cloud-manager-ontap-onprem/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><link rel="alternate" type="application/rss+xml" title="NetApp Documentation" href="/it-it/cloud-manager-ontap-onprem/feed.xml"><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/cloud-manager-ontap-onprem/css/netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/cloud-manager-ontap-onprem/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/cloud-manager-ontap-onprem/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" />
+  <link rel='stylesheet' href='/it-it/cloud-manager-ontap-onprem/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    function addAdobeLaunch(adobeId) {
+      var head = document.getElementsByTagName('head')[0];
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/"+adobeId+".min.js";
+      head.appendChild(adobe);
+    }
+
+    function addGoogleAnalytics(gtagId) {
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id="+gtagId;
+      var head = document.getElementsByTagName('head')[0];
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gtagId);
+    }
+
+    function addConsent(consentId) {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/"+consentId+"/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = consentId;
+      head.appendChild(onetrustScript);
+    }addConsent("72570c5c-fe30-465f-b0e0-b77f7fb4ae34");
+    addAdobeLaunch("launch-e9ff3acac59f");
+    addGoogleAnalytics("UA-81697994-3");function OptanonWrapper() { }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/cloud-manager-ontap-onprem/js/na-search.js'></script><script src='/it-it/cloud-manager-ontap-onprem/js/na-pagenav.js'></script><script src='/it-it/cloud-manager-ontap-onprem/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/it-it/cloud-manager-ontap-onprem/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/it-it/cloud-manager-ontap-onprem/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/it-it/cloud-manager-ontap-onprem/js/na-utility.js'></script> -->
+  <script src='/it-it/cloud-manager-ontap-onprem/js/clouddocs.js'></script>
+  <script src='/it-it/cloud-manager-ontap-onprem/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src='/it-it/cloud-manager-ontap-onprem/js/toc.js'></script> -->
+  <!-- <script src='/it-it/cloud-manager-ontap-onprem/js/customscripts.js'></script> --><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+          $(".sidebar-nav-container").on("scroll", function() {
+            $.cookie("sidebarScroll", $(".sidebar-nav-container").scrollTop(), {
+              path    : "/it-it/cloud-manager-ontap-onprem"  
+            });
+          });
+          $(function() {
+            if ($.cookie("sidebarScroll")) {
+              $(".sidebar-nav-container").scrollTop($.cookie("sidebarScroll"));
+            }
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/it-it/cloud-manager-ontap-onprem/js/custom-dropdown.js'></script>
+  <script src='/it-it/cloud-manager-ontap-onprem/js/FileSaver.min.js'></script>
+  <script src='/it-it/cloud-manager-ontap-onprem/js/jszip-utils.min.js'></script>
+  <script src='/it-it/cloud-manager-ontap-onprem/js/jszip.min.js'></script>
+  <!-- <script src='/it-it/cloud-manager-ontap-onprem/js/pdf-ux.js'></script> -->
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html&page-title=Gestire i cluster ONTAP on-premise rilevati con un connettore" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-ontap-onprem/images/discuss-sm.svg" alt="" class="github-icon" />Richiedi modifiche alla documentazione</a><a target="_blank" href="https://github.com/NetAppDocs/cloud-manager-ontap-onprem/blob/main/task-manage-ontap-connector.adoc" class="page-nav-contribute-link" role="button"><img src="/it-it/cloud-manager-ontap-onprem/images/edit-sm.svg" alt="" class="github-icon" />Modifica questa pagina</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/it-it/cloud-manager-ontap-onprem/images/article-sm.svg" alt="" class="github-icon" />Scopri come collaborare</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">IN QUESTA PAGINA</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">Prodotto e soluzioni</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">Supporto e training</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">Community</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">Blog</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">Testimonianze dei clienti</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/company/contact-us/" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/it-it/cloud-manager-ontap-onprem/search.html"
+          data-type="widget" 
+          data-placeholder="Esplora la documentazione"
+          data-no-results-found="Nessun risultato per {query}"
+          data-did-you-mean="Cerca {suggestion}."
+          data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+          data-results-found="{hitCount} risultati trovati"
+          data-error-message="Si è verificato un problema durante il recupero dei risultati. Riprova."
+          data-error-reset="Reimposta ricerca"
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">Italiano</span>
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/de-de/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/es-es/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/fr-fr/cloud-manager-ontap-onprem/task-manage-ontap-connector.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+        </li></ul>
+    </div>
+    <!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <button id="btn-sidebar-collapse" onclick="hideSidebar()"><img src="/it-it/cloud-manager-ontap-onprem/images/collapse.png" alt="Comprimi pannello di navigazione"></button>
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>PDF disponibili<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/it-it/cloud-manager-ontap-onprem/pdfs/fullsite-sidebar/Documentazione_del_cluster_ONTAP_on_premise.pdf" >
+          <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-ontap-onprem/pdfs/sidebar/Note_di_rilascio.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>
+            Note di rilascio
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-ontap-onprem/pdfs/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-ontap-onprem/pdfs/sidebar/Gestire_cluster_ONTAP_on_premise.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>
+            Gestire cluster ONTAP on-premise
+          </a>
+          
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/it-it/cloud-manager-ontap-onprem/pdfs/sidebar/Conoscenza_e_supporto.pdf" 
+            
+          >
+            <img src="/it-it/cloud-manager-ontap-onprem/images/pdf.png" alt="" width="16" height="16"/>
+            Conoscenza e supporto
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/it-it/cloud-manager-ontap-onprem/images/pdf-zip.png" alt="" width="16" height="16"/>
+      <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="prod-nav" id="product-nav">
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/it-it/cloud-manager-family/"><img src="/it-it/cloud-manager-ontap-onprem/images/left_arrow.png" alt=""><pre>Tutta la documentazione BlueXP</pre></a>
+</div><div class="sidebar-nav-container" id="mysidebardiv">
+  <ul id="mysidebar" class="nav"><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentazione sul cluster ONTAP on-premise"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/index.html">
+        Documentazione sul cluster ONTAP on-premise
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note di rilascio"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Note di rilascio</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/whats-new.html">
+        Novità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Limitazioni note"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/reference-limitations.html">
+        Limitazioni note
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Inizia subito</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scopri di più sulla gestione dei cluster ONTAP on-premise"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/concept-onprem-ontap.html">
+        Scopri di più sulla gestione dei cluster ONTAP on-premise
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Scopri i cluster ONTAP"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-discovering-ontap.html">
+        Scopri i cluster ONTAP
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire cluster ONTAP on-premise"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Gestire cluster ONTAP on-premise</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i cluster rilevati direttamente"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-manage-ontap-direct.html">
+        Gestire i cluster rilevati direttamente
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire i cluster rilevati con un connettore"
+      data-li-level="2#" 
+      class="  active "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-manage-ontap-connector.html">
+        Gestire i cluster rilevati con un connettore
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare le informazioni sul cluster e i dettagli del contratto"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-view-cluster-info.html">
+        Visualizzare le informazioni sul cluster e i dettagli del contratto
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ottimizza i cluster con Digital Advisor"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/concept-aiq-digital-advisor.html">
+        Ottimizza i cluster con Digital Advisor
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Rimuovere un ambiente di lavoro ONTAP on-premise"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-remove-on-prem.html">
+        Rimuovere un ambiente di lavoro ONTAP on-premise
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Conoscenza e supporto"
+      data-li-level="1" 
+      class="subfolders "
+    ><a href="#">
+        <div class="na-navbar-padding"> Conoscenza e supporto</div>
+      </a>
+      <ul style="display: none;">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrati per ricevere assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-support-registration.html">
+        Registrati per ricevere assistenza
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Richiedi assistenza"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/task-get-help.html">
+        Richiedi assistenza
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/it-it/cloud-manager-ontap-onprem/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+<script>$("#mysidebar li.active").parents('ul').css("display","block");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <div class="ie-utility">
+  <button id="btn-sidebar-expand" onclick="showSidebar()"><img src="/it-it/cloud-manager-ontap-onprem/images/expand.png" alt="Espandi pannello di navigazione"></button>
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/us-en/cloud/">Documentazione Cloud</a>
+        </li>
+        
+
+        
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com/it-it/cloud-manager-family/">BlueXP</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/it-it/cloud-manager-ontap-onprem/">On-premises&nbsp;ONTAP&nbsp;clusters</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">Gestire i cluster ONTAP on-premise rilevati con un connettore</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2023-05-23 21:30:50 +0000">05/23/2023</time>
+    
+  
+
+<span>Collaboratori
+</span>
+
+
+</p>
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>Se è stato rilevato un cluster ONTAP on-premise utilizzando un connettore, è possibile creare volumi dalla vista standard, utilizzare Gestione sistema dalla vista avanzata e attivare i servizi dati BlueXP.</p>
+</div>
+<div class="paragraph">
+<p>In Canvas, l&#8217;icona dell&#8217;ambiente di lavoro per un cluster rilevato con un connettore dovrebbe essere simile a quanto segue:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-connector-we.png" alt="Una schermata dell&#8217;icona dell&#8217;ambiente di lavoro che viene visualizzata in Canvas"></span></p>
+</div>
+<div class="paragraph">
+<p>Se un ambiente di lavoro è stato rilevato direttamente, l&#8217;icona dell&#8217;ambiente di lavoro include la parola "Direct".</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="creare-volumi-dalla-vista-standard">Creare volumi dalla vista Standard</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dopo aver scoperto il cluster ONTAP on-premise di BlueXP utilizzando un connettore, è possibile aprire l&#8217;ambiente di lavoro per eseguire il provisioning e la gestione dello storage.</p>
+</div>
+<div class="sect2">
+<h3 id="creare-volumi">Creare volumi</h3>
+<div class="paragraph">
+<p>BlueXP consente di creare volumi NFS o CIFS su aggregati esistenti. Non è possibile creare nuovi aggregati su un cluster ONTAP on-premise dalla vista standard di BlueXP. È necessario utilizzare la vista avanzata per creare aggregati.</p>
+</div>
+<div class="paragraph">
+<p>Una funzionalità di BlueXP chiamata "modelli" consente di creare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, come database o servizi di streaming. Se l&#8217;organizzazione ha creato modelli di volume da utilizzare, seguire questa procedura <a href="#creare-volumi-da-modelli">questi passaggi</a>.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Dal menu di navigazione, selezionare <strong>Storage &gt; Canvas</strong>.</p>
+</li>
+<li>
+<p>Nella pagina Canvas, fare doppio clic sul nome del cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.</p>
+</li>
+<li>
+<p>Fare clic su <strong>Volumes &gt; Add Volume</strong> (volumi &gt; Aggiungi volume)</p>
+</li>
+<li>
+<p>Seguire i passaggi della procedura guidata per creare il volume.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Dettagli, protezione e tag</strong>: Inserisci i dettagli del volume come il nome e le dimensioni, scegli una policy Snapshot e specifica i tag del volume, se lo desideri.</p>
+<div class="paragraph">
+<p>Alcuni dei campi di questa pagina sono esplicativi. Il seguente elenco descrive i campi per i quali potrebbe essere necessario fornire assistenza:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Campo</th>
+<th class="tableblock halign-left valign-top">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dimensione</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le dimensioni massime che è possibile inserire dipendono in gran parte dall&#8217;attivazione o meno del thin provisioning, che consente di creare un volume più grande dello storage fisico attualmente disponibile per l&#8217;IT.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Policy di Snapshot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Una policy di copia Snapshot specifica la frequenza e il numero di copie Snapshot NetApp create automaticamente. Una copia Snapshot di NetApp è un&#8217;immagine del file system point-in-time che non ha alcun impatto sulle performance e richiede uno storage minimo. È possibile scegliere il criterio predefinito o nessuno. È possibile scegliere nessuno per i dati transitori, ad esempio tempdb per Microsoft SQL Server.</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Protocol</strong> (protocollo): Scegliere il protocollo per il volume (NFS, CIFS o iSCSI), quindi impostare il controllo di accesso o le autorizzazioni per il volume.</p>
+<div class="paragraph">
+<p>Se si sceglie CIFS e un server non è ancora configurato, BlueXP richiede di configurare un server CIFS utilizzando Active Directory o un gruppo di lavoro.</p>
+</div>
+<div class="paragraph">
+<p>Il seguente elenco descrive i campi per i quali potrebbe essere necessario fornire assistenza:</p>
+</div>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Campo</th>
+<th class="tableblock halign-left valign-top">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controllo degli accessi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Un criterio di esportazione NFS definisce i client nella subnet che possono accedere al volume. Per impostazione predefinita, BlueXP inserisce un valore che fornisce l&#8217;accesso a tutte le istanze della subnet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Permessi e utenti/gruppi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Questi campi consentono di controllare il livello di accesso a una condivisione SMB per utenti e gruppi (detti anche elenchi di controllo degli accessi o ACL). È possibile specificare utenti o gruppi Windows locali o di dominio, utenti o gruppi UNIX. Se si specifica un nome utente Windows di dominio, è necessario includere il dominio dell&#8217;utente utilizzando il formato dominio/nome utente.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>Usage Profile</strong> (Profilo di utilizzo): Scegliere se attivare o disattivare le funzionalità di efficienza dello storage sul volume per ridurre la quantità totale di storage necessaria.</p>
+</li>
+<li>
+<p><strong>Revisione</strong>: Esaminare i dettagli relativi al volume, quindi fare clic su <strong>Aggiungi</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="creare-volumi-da-modelli">Creare volumi da modelli</h3>
+<div class="paragraph">
+<p>Se l&#8217;organizzazione ha creato modelli di volume ONTAP on-premise in modo da poter implementare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, seguire la procedura descritta in questa sezione.</p>
+</div>
+<div class="paragraph">
+<p>Il modello dovrebbe semplificare il lavoro, in quanto alcuni parametri del volume saranno già definiti nel modello, ad esempio tipo di disco, dimensione, protocollo, policy di snapshot e altro ancora. Quando un parametro è già predefinito, è sufficiente passare al parametro di volume successivo.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-ontap-onprem/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+È possibile creare volumi NFS o CIFS solo quando si utilizzano modelli.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Nella pagina Canvas, fare clic sul nome del sistema ONTAP on-premise sul quale si desidera eseguire il provisioning di un volume.</p>
+</li>
+<li>
+<p>Fare clic su <span class="image"><img src="./media/screenshot_gallery_options.gif" alt="Un&#8217;icona con tre punti."></span> &gt; <strong>Aggiungi volume da modello</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_add_vol_ontap.png" alt="Una schermata che mostra come aggiungere un nuovo volume da un modello."></span></p>
+</div>
+</li>
+<li>
+<p>Nella pagina <em>Select Template</em>, selezionare il modello che si desidera utilizzare per creare il volume e fare clic su <strong>Next</strong> (Avanti).</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_select_template_ontap.png" alt="Una schermata dei modelli di applicazione disponibili."></span></p>
+</div>
+<div class="paragraph">
+<p>Viene visualizzata la pagina <em>define Parameters</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_define_ontap_vol_from_template.png" alt="Una schermata che mostra un modello vuoto da compilare per creare un volume."></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Nota:</strong> è possibile fare clic sulla casella di controllo <strong>Mostra parametri di sola lettura</strong> per visualizzare tutti i campi bloccati dal modello se si desidera visualizzare i valori di tali parametri. Per impostazione predefinita, questi campi predefiniti sono nascosti e vengono visualizzati solo i campi da completare.</p>
+</div>
+</li>
+<li>
+<p>Nell&#8217;area <em>contesto</em>, l&#8217;ambiente di lavoro viene compilato con il nome dell&#8217;ambiente di lavoro con cui hai iniziato. Selezionare le voci <strong>Storage VM</strong> e <strong>aggregate</strong> in cui verrà creato il volume.</p>
+</li>
+<li>
+<p>Aggiungere valori per tutti i parametri non codificati dal modello.</p>
+<div class="paragraph">
+<p><a href="#creare-volumi">Scopri i parametri necessari per creare il volume</a>.</p>
+</div>
+</li>
+<li>
+<p>Fare clic su <strong>Esegui modello</strong> dopo aver definito tutti i parametri necessari per questo volume.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Risultato</div>
+<p>BlueXP esegue il provisioning del volume e visualizza una pagina in modo da visualizzare l&#8217;avanzamento.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_template_creating_resource_ontap.png" alt="Una schermata che mostra lo stato di avanzamento della creazione del nuovo volume dal modello."></span></p>
+</div>
+<div class="paragraph">
+<p>Il nuovo volume viene quindi aggiunto all&#8217;ambiente di lavoro.</p>
+</div>
+<div class="paragraph">
+<p>Inoltre, se nel modello viene implementata un&#8217;azione secondaria, ad esempio l&#8217;attivazione del backup e ripristino BlueXP sul volume, viene eseguita anche tale azione.</p>
+</div>
+<div class="paragraph">
+<div class="title">Al termine</div>
+<p>Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le autorizzazioni per i file e le cartelle e verificare che tali utenti possano accedere alla condivisione e creare un file.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="amministrare-ontap-utilizzando-la-visualizzazione-avanzata">Amministrare ONTAP utilizzando la visualizzazione avanzata</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Se è necessario eseguire una gestione avanzata di un cluster ONTAP on-premise, è possibile farlo utilizzando Gestione di sistema di ONTAP, un&#8217;interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l&#8217;interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.</p>
+</div>
+<div class="paragraph">
+<p>Questa visualizzazione avanzata è disponibile come anteprima. Intendiamo perfezionare questa esperienza e aggiungere miglioramenti alle prossime release. Inviaci un feedback utilizzando la chat in-product.</p>
+</div>
+<div class="sect2">
+<h3 id="caratteristiche">Caratteristiche</h3>
+<div class="paragraph">
+<p>La visualizzazione avanzata di BlueXP consente di accedere a funzionalità di gestione aggiuntive:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Gestione avanzata dello storage</p>
+<div class="paragraph">
+<p>Gestione di gruppi di coerenza, condivisioni, qtree, quote e Storage VM.</p>
+</div>
+</li>
+<li>
+<p>Gestione del networking</p>
+<div class="paragraph">
+<p>Gestione di IPspaces, interfacce di rete, portset e porte ethernet.</p>
+</div>
+</li>
+<li>
+<p>Eventi e lavori</p>
+<div class="paragraph">
+<p>Visualizza registri eventi, avvisi di sistema, processi e registri di audit.</p>
+</div>
+</li>
+<li>
+<p>Protezione avanzata dei dati</p>
+<div class="paragraph">
+<p>Protezione di VM di storage, LUN e gruppi di coerenza.</p>
+</div>
+</li>
+<li>
+<p>Gestione degli host</p>
+<div class="paragraph">
+<p>Configurare I gruppi iniziatori SAN e i client NFS.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="configurazioni-supportate">Configurazioni supportate</h3>
+<div class="paragraph">
+<p>La gestione avanzata tramite Gestione di sistema è supportata con i cluster ONTAP on-premise che eseguono 9.10.0 o versioni successive.</p>
+</div>
+<div class="paragraph">
+<p>L&#8217;integrazione di System Manager non è supportata nelle regioni di GovCloud o nelle regioni che non dispongono di accesso a Internet in uscita.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="limitazioni">Limitazioni</h3>
+<div class="paragraph">
+<p>Alcune funzionalità di Gestione di sistema non sono supportate con i cluster ONTAP on-premise quando si utilizza la visualizzazione avanzata in BlueXP.</p>
+</div>
+<div class="paragraph">
+<p><a href="reference-limitations.html">"Esaminare l&#8217;elenco delle limitazioni"</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="utilizzo-della-visualizzazione-avanzata-system-manager">Utilizzo della visualizzazione avanzata (System Manager)</h3>
+<div class="paragraph">
+<p>Aprire un ambiente di lavoro ONTAP on-premise e fare clic sull&#8217;opzione visualizzazione avanzata.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Nella pagina Canvas, fare doppio clic sul nome di un ambiente di lavoro ONTAP on-premise.</p>
+</li>
+<li>
+<p>In alto a destra, fare clic su <strong>passa alla visualizzazione avanzata</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-advanced-view.png" alt="Schermata di un ambiente di lavoro ONTAP on-premise che mostra l&#8217;opzione passa alla visualizzazione avanzata."></span></p>
+</div>
+</li>
+<li>
+<p>Se viene visualizzato il messaggio di conferma, leggerlo e fare clic su <strong>Chiudi</strong>.</p>
+</li>
+<li>
+<p>Utilizzare Gestione sistema per gestire ONTAP.</p>
+</li>
+<li>
+<p>Se necessario, fare clic su <strong>passa alla visualizzazione standard</strong> per tornare alla gestione standard tramite BlueXP.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot-standard-view.png" alt="Schermata di un ambiente di lavoro ONTAP on-premise che mostra l&#8217;opzione passa alla visualizzazione standard."></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ottieni-assistenza-con-system-manager">Ottieni assistenza con System Manager</h3>
+<div class="paragraph">
+<p>Per assistenza sull&#8217;utilizzo di Gestione di sistema con ONTAP, consultare la sezione <a href="https://docs.netapp.com/us-en/ontap/index.html" target="_blank" rel="noopener">"Documentazione ONTAP"</a> per istruzioni dettagliate. Di seguito sono riportati alcuni link utili:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/volume-admin-overview-concept.html" target="_blank" rel="noopener">"Gestione di volumi e LUN"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/network-manage-overview-concept.html" target="_blank" rel="noopener">"Gestione della rete"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/ontap/concept_dp_overview.html" target="_blank" rel="noopener">"Protezione dei dati"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="abilitare-i-servizi-bluexp">Abilitare i servizi BlueXP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Abilita i servizi dati BlueXP nei tuoi ambienti di lavoro per replicare i dati, eseguire il backup dei dati, eseguire il Tier data e altro ancora.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Replicare i dati</dt>
+<dd>
+<p>Replica dei dati tra sistemi Cloud Volumes ONTAP, Amazon FSX per file system ONTAP e cluster ONTAP. Scegli una replica dei dati una tantum, che può aiutarti a spostare i dati da e verso il cloud, o una pianificazione ricorrente, che può aiutarti con il disaster recovery o la conservazione dei dati a lungo termine.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html" target="_blank" rel="noopener">"Documentazione di replica"</a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Backup dei dati</dt>
+<dd>
+<p>Esegui il backup dei dati dal tuo sistema ONTAP on-premise allo storage a oggetti a basso costo nel cloud.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html" target="_blank" rel="noopener">"Documentazione di backup e recovery"</a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Scansione, mappatura e classificazione dei dati</dt>
+<dd>
+<p>Esegui la scansione dei cluster on-premise aziendali per mappare e classificare i dati e identificare le informazioni private. In questo modo è possibile ridurre i rischi di sicurezza e conformità, ridurre i costi di storage e assistere i progetti di migrazione dei dati.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html" target="_blank" rel="noopener">"Documentazione di classificazione"</a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Tiering dei dati nel cloud</dt>
+<dd>
+<p>Estendi il tuo data center al cloud attraverso il tiering automatico dei dati inattivi dai cluster ONTAP allo storage a oggetti.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html" target="_blank" rel="noopener">"Documentazione di tiering"</a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Mantenere lo stato di salute, l&#8217;uptime e le performance</dt>
+<dd>
+<p>Implementare le soluzioni suggerite ai cluster ONTAP prima che si verifichi un&#8217;interruzione o un guasto.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-operational-resiliency/index.html" target="_blank" rel="noopener">"Documentazione sulla resilienza operativa"</a></p>
+</div>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Identificare i cluster a bassa capacità</dt>
+<dd>
+<p>Identificare i cluster che mostrano una capacità bassa, esaminare i cluster per la capacità corrente e prevista e molto altro ancora.</p>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/bluexp-economic-efficiency/index.html" target="_blank" rel="noopener">"Documentazione sull&#8217;efficienza economica"</a></p>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui Cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/it-it/cloud-manager-ontap-onprem/images/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/cloud-manager-ontap-onprem/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/cloud-manager-ontap-onprem/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/cloud-manager-ontap-onprem/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/cloud-manager-ontap-onprem/js/tabbed-blocks.js'></script>
+    <script src='/it-it/cloud-manager-ontap-onprem/js/sidebar.js'></script>
+  </body></html>
