@@ -44,7 +44,7 @@ Con l'opzione di rilevamento diretto, viene richiesto di accedere con le credenz
 La versione del cluster deve essere 9.13.1 per abilitare il backup e il ripristino BlueXP da System Manager.
 
 +
-Se hai _non_ individuato un cluster utilizzando un connettore, non puoi utilizzare System Manager (vista avanzata) per abilitare il backup e il ripristino. Tuttavia, è possibile abilitare il backup e il ripristino su un cluster on-premise direttamente da BlueXP. https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["Scopri come iniziare"^]
+Se hai _non_ individuato un cluster utilizzando un connettore, non puoi utilizzare System Manager (vista avanzata) per abilitare il backup e il ripristino. Tuttavia, è possibile abilitare il backup e il ripristino su un cluster on-premise direttamente da BlueXP. https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["Scopri come iniziare"^]
 
 * Aggiornamenti on-demand
 +

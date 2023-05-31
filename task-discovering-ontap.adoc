@@ -59,7 +59,7 @@ Prima di scoprire il cluster ONTAP on-premise, assicurarsi di aver soddisfatto i
 
 * Dovresti aver iniziato a utilizzare BlueXP, che include l'accesso e la configurazione di un account.
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-overview.html["Scopri come iniziare a utilizzare BlueXP"^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["Scopri come iniziare a utilizzare BlueXP"^]
 
 * Sono necessari l'indirizzo IP di gestione del cluster e la password per l'account utente admin.
 * BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewall personalizzati, il cluster ONTAP deve consentire l'accesso HTTPS in entrata attraverso la porta 443.
@@ -78,9 +78,9 @@ Il criterio firewall predefinito "mgmt" consente l'accesso HTTPS in entrata da t
 Se si desidera eseguire il tiering dei dati cold nel cloud, è necessario esaminare i requisiti per il connettore in base alla posizione in cui si prevede di eseguire il tiering dei dati cold.
 
 +
-** https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["Scopri di più sui connettori"^]
-** https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-managing-connectors.html["Passaggio da un connettore all'altro"^]
-** https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html["Scopri di più sul tiering BlueXP"^]
+** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Scopri di più sui connettori"^]
+** https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["Passaggio da un connettore all'altro"^]
+** https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Scopri di più sul tiering BlueXP"^]
 
 
 * L'host del connettore deve consentire l'accesso HTTPS in uscita attraverso la porta 443.

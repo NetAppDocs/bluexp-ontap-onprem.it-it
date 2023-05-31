@@ -45,7 +45,7 @@ NOTE: Se non si dispone di un connettore, non è possibile eseguire aggiornament
 
 Quando si scopre un cluster ONTAP on-premise dalla console BlueXP, viene visualizzata una singola opzione:
 
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-discover-on-prem-ontap.png["Una schermata che mostra l'opzione Discover on-premise ONTAP disponibile durante la creazione di un ambiente di lavoro"]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-ontap-onprem/main/media/screenshot-discover-on-prem-ontap.png["Una schermata che mostra l'opzione Discover on-premise ONTAP disponibile durante la creazione di un ambiente di lavoro"]
 
 In precedenza, esistevano flussi separati per il rilevamento diretto e per il rilevamento con un connettore. Entrambe le opzioni sono ancora disponibili, ma unite in un singolo flusso.
 
@@ -55,7 +55,7 @@ Quando si avvia il processo di rilevamento, BlueXP rileva il cluster come segue:
 * Se non si dispone di un connettore o se il connettore non dispone di una connessione al cluster ONTAP, BlueXP utilizzerà automaticamente l'opzione di rilevamento e gestione diretta.
 
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Scopri di più sulle opzioni di rilevamento e gestione"].
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Scopri di più sulle opzioni di rilevamento e gestione"].
 
 
 
@@ -67,7 +67,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 Quando si apre un ambiente di lavoro ONTAP on-premise scoperto direttamente senza utilizzare un connettore, è ora possibile salvare le credenziali del cluster ONTAP in modo che non sia necessario inserirle ogni volta che si apre l'ambiente di lavoro.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-direct.html["Scopri di più su questa opzione."]
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-direct.html["Scopri di più su questa opzione."]
 
 
 
@@ -81,7 +81,7 @@ Le seguenti modifiche sono state introdotte con la versione 3.9.24 del connettor
 
 Ora puoi scoprire direttamente i tuoi cluster ONTAP on-premise senza utilizzare un connettore. Questa opzione consente di attivare la gestione del cluster solo tramite System Manager. Non è possibile abilitare alcun servizio dati BlueXP su questo tipo di ambiente di lavoro.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Scopri di più su questa opzione di rilevamento e gestione"].
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Scopri di più su questa opzione di rilevamento e gestione"].
 
 
 
@@ -89,7 +89,7 @@ https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.
 
 Per i cluster ONTAP on-premise rilevati tramite un connettore, la vista standard di BlueXP mostra ora i volumi FlexGroup creati tramite Gestore di sistema o l'interfaccia CLI di ONTAP. Puoi anche gestire questi volumi clonandoli, modificandone le impostazioni, eliminandoli e molto altro ancora.
 
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-flexgroup-volumes.png["Una schermata che mostra un volume FlexGroup nella pagina Volumes per un cluster ONTAP on-premise."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-ontap-onprem/main/media/screenshot-flexgroup-volumes.png["Una schermata che mostra un volume FlexGroup nella pagina Volumes per un cluster ONTAP on-premise."]
 
 BlueXP non supporta la creazione di volumi FlexGroup. Per creare volumi FlexGroup, è necessario continuare a utilizzare Gestione sistema o l'interfaccia CLI.
 
@@ -107,7 +107,7 @@ Abbiamo introdotto una nuova pagina Panoramica per fornire dettagli chiave su un
 
 È inoltre possibile visualizzare dettagli sull'integrazione con altri servizi BlueXP che consentono il tiering dei dati, la replica dei dati e i backup.
 
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-overview.png["Schermata che mostra la pagina Panoramica di un cluster ONTAP on-premise."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-ontap-onprem/main/media/screenshot-overview.png["Schermata che mostra la pagina Panoramica di un cluster ONTAP on-premise."]
 
 
 
@@ -115,7 +115,7 @@ image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/ma
 
 Abbiamo riprogettato la pagina Volumes per fornire un riepilogo dei volumi su un cluster. Il riepilogo mostra il numero totale di volumi, la quantità di capacità fornita, la capacità utilizzata e riservata e la quantità di dati a più livelli.
 
-image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-ontap-onprem/main/media/screenshot-volumes.png["Una schermata che mostra la pagina dei volumi per un cluster ONTAP on-premise."]
+image:https://raw.githubusercontent.com/NetAppDocs/bluexp-ontap-onprem/main/media/screenshot-volumes.png["Una schermata che mostra la pagina dei volumi per un cluster ONTAP on-premise."]
 
 
 
@@ -145,7 +145,7 @@ Questa visualizzazione avanzata è disponibile come anteprima con cluster ONTAP 
 
 Ora puoi visualizzare un inventario dei cluster ONTAP on-premise insieme alle date di scadenza dei contratti hardware e di servizio. Sono inoltre disponibili ulteriori dettagli sui cluster.
 
-https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-view-cluster-info.html["Scopri come visualizzare queste importanti informazioni sul cluster on-premise"]. È necessario disporre di un account NetApp Support Site (NSS) per i cluster e le credenziali NSS devono essere allegate al proprio account Cloud Manager.
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-view-cluster-info.html["Scopri come visualizzare queste importanti informazioni sul cluster on-premise"]. È necessario disporre di un account NetApp Support Site (NSS) per i cluster e le credenziali NSS devono essere allegate al proprio account Cloud Manager.
 
 
 

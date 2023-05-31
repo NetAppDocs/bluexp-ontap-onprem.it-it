@@ -223,25 +223,25 @@ Abilita i servizi dati BlueXP nei tuoi ambienti di lavoro per replicare i dati, 
 Replicare i dati:: Replica dei dati tra sistemi Cloud Volumes ONTAP, Amazon FSX per file system ONTAP e cluster ONTAP. Scegli una replica dei dati una tantum, che può aiutarti a spostare i dati da e verso il cloud, o una pianificazione ricorrente, che può aiutarti con il disaster recovery o la conservazione dei dati a lungo termine.
 +
 --
-https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["Documentazione di replica"^]
+https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html["Documentazione di replica"^]
 
 --
 Backup dei dati:: Esegui il backup dei dati dal tuo sistema ONTAP on-premise allo storage a oggetti a basso costo nel cloud.
 +
 --
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["Documentazione di backup e recovery"^]
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Documentazione di backup e recovery"^]
 
 --
 Scansione, mappatura e classificazione dei dati:: Esegui la scansione dei cluster on-premise aziendali per mappare e classificare i dati e identificare le informazioni private. In questo modo è possibile ridurre i rischi di sicurezza e conformità, ridurre i costi di storage e assistere i progetti di migrazione dei dati.
 +
 --
-https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Documentazione di classificazione"^]
+https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Documentazione di classificazione"^]
 
 --
 Tiering dei dati nel cloud:: Estendi il tuo data center al cloud attraverso il tiering automatico dei dati inattivi dai cluster ONTAP allo storage a oggetti.
 +
 --
-https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html["Documentazione di tiering"^]
+https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Documentazione di tiering"^]
 
 --
 Mantenere lo stato di salute, l'uptime e le performance:: Implementare le soluzioni suggerite ai cluster ONTAP prima che si verifichi un'interruzione o un guasto.
