@@ -2,22 +2,22 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloud-manager-ontap-onprem | NetApp Documentation</title>
-    <atom:link href="https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/feed.xml" rel="self" type="application/rss+xml"/>
-    <link>https://docs.netapp.com/it-it/cloud-manager-ontap-onprem</link>
+    <title>bluexp-ontap-onprem | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/it-it/bluexp-ontap-onprem/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/it-it/bluexp-ontap-onprem</link>
     <description>The latest updates from NetApp Documentation</description>
     <language>it-it</language>
     <ttl>60</ttl>
-    <pubDate>Wed, 24 May 2023 08:37:57 +0000</pubDate>
-    <lastBuildDate>Wed, 24 May 2023 08:37:57 +0000</lastBuildDate>
+    <pubDate>Wed, 31 May 2023 14:58:26 +0000</pubDate>
+    <lastBuildDate>Wed, 31 May 2023 14:58:26 +0000</lastBuildDate>
     
     
     
     <item>
-      <title>Novità dei cluster ONTAP on-premise (23 May 2023)</title>
-      <pubDate>Tue, 23 May 2023 21:30:50 +0000</pubDate>
-      <link>https://docs.netapp.com/it-it/cloud-manager-ontap-onprem/whats-new.html?time=1684877450</link>
-      <guid isPermaLink="false">Tue, 23 May 2023 21:30:50 +0000</guid>
+      <title>Novità dei cluster ONTAP on-premise (31 May 2023)</title>
+      <pubDate>Wed, 31 May 2023 14:54:35 +0000</pubDate>
+      <link>https://docs.netapp.com/it-it/bluexp-ontap-onprem/whats-new.html?time=1685544875</link>
+      <guid isPermaLink="false">Wed, 31 May 2023 14:54:35 +0000</guid>
       <description><![CDATA[ Scopri le novità della gestione dei cluster ONTAP on-premise in BlueXP. ]]></description>
     </item>
     
