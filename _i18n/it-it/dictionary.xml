@@ -212,50 +212,36 @@
   <block id="c5fbee6586294d81141f8dd158707985" category="doc">Scopri i cluster ONTAP on-premise</block>
   <block id="eacd3ed630ae5b36126bd8cf27a43632" category="paragraph">Scopri i cluster ONTAP on-premise di BlueXP per iniziare a gestire i volumi ed eseguire una gestione avanzata utilizzando Gestione di sistema di ONTAP, disponibile da BlueXP.</block>
   <block id="e96ffca10c8548ba223da5a961f4e0bb" category="section-title">Opzioni di rilevamento e gestione</block>
-  <block id="a8b4b8a9fc6c5671a89f402cc069afda" category="paragraph">BlueXP offre due modi per rilevare e gestire i cluster ONTAP on-premise:</block>
-  <block id="a8fd54ba8c2928ea1b2a300ca75a00fa" category="list-text">Rilevamento attraverso un connettore</block>
   <block id="a3736487d08fb63c22adeaf7035f0bca" category="list-text">Questa opzione consente di gestire i cluster che eseguono ONTAP 8.3 e versioni successive utilizzando le seguenti funzionalità:</block>
   <block id="dad407e605b93746e62dec356ab5303e" category="list-text">La vista Standard, che fornisce le operazioni di base del volume</block>
   <block id="05280ae0f52dfc03d23962982cf79f21" category="list-text">La visualizzazione avanzata, che consente la gestione tramite Gestione di sistema (supportata con ONTAP 9.10.0 e versioni successive)</block>
-  <block id="137ffb60b26b3895f9ae6f3042e0d587" category="list-text">Integrazione con i servizi BlueXP, che offrono replica dei dati, backup e ripristino, classificazione dei dati e tiering dei dati</block>
   <block id="e9b3b1686b45ea49547763029f379272" category="paragraph">Questa opzione richiede un connettore, che è possibile installare in un cloud provider o on-premise.</block>
-  <block id="9023f6f288dd42621136db54ed1a4521" category="list-text">Rilevamento diretto</block>
-  <block id="085602a04bf66e6b72300eefb21c9c32" category="list-text">Questa opzione consente di gestire i cluster che eseguono ONTAP 9.12.1 e versioni successive utilizzando Gestione sistema. Non sono disponibili altre opzioni di gestione. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi dati.</block>
   <block id="d7aa3f7ee53003f5d75a0f500ddb1e6a" category="paragraph">Questa opzione non richiede un connettore.</block>
   <block id="f75478b929f43a364a455cc34445b807" category="paragraph">Quando si accede a Gestore di sistema su un cluster ONTAP on-premise con 9.12.1 o versione successiva e con connettività al servizio BlueXP, viene richiesto di gestire il cluster direttamente da BlueXP. Se si segue questa richiesta, il cluster viene rilevato in BlueXP utilizzando l'opzione di rilevamento diretto.</block>
   <block id="5883223e097bdc0962b33579a610a819" category="paragraph">Una volta scoperto, i cluster sono disponibili come ambiente di lavoro su BlueXP Canvas.</block>
   <block id="797c4c6d452fc60610219b263c22393d" category="paragraph">Se si decide di utilizzare l'altra opzione di rilevamento in un secondo momento, sarà necessario rilevare il cluster on-premise come ambiente di lavoro separato in Canvas. È quindi possibile rimuovere l'altro ambiente di lavoro.</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">Requisiti</block>
-  <block id="0f7cd5e1a723722aba147a095960b6f2" category="paragraph">Prima di scoprire il cluster ONTAP on-premise, assicurarsi di aver soddisfatto i seguenti requisiti.</block>
   <block id="a1a264e616e24563d4b8f8b5795ea403" category="section-title">Requisiti generali</block>
   <block id="5b972456043217ec9e0b836b869e5061" category="list-text">Dovresti aver iniziato a utilizzare BlueXP, che include l'accesso e la configurazione di un account.</block>
   <block id="89e019c15bf54627a2a1e4918e66bab6" category="inline-link">Scopri come iniziare a utilizzare BlueXP</block>
   <block id="7d0b01345a5038f25fdd17dc04d8872e" category="list-text">Sono necessari l'indirizzo IP di gestione del cluster e la password per l'account utente admin.</block>
   <block id="95773f82d1d681361d7f2215f3912515" category="list-text">BlueXP rileva i cluster ONTAP utilizzando HTTPS. Se si utilizzano criteri firewall personalizzati, il cluster ONTAP deve consentire l'accesso HTTPS in entrata attraverso la porta 443.</block>
   <block id="6f9f6c9a212736eda9e7ebc73ff5b991" category="paragraph">Il criterio firewall predefinito "mgmt" consente l'accesso HTTPS in entrata da tutti gli indirizzi IP. Se questo criterio predefinito è stato modificato o se è stato creato un criterio firewall personalizzato, è necessario associare il protocollo HTTPS a tale criterio e abilitare l'accesso dall'host del connettore.</block>
-  <block id="57e3bd92879e52aabb2d704d581a7eca" category="section-title">Requisiti per il rilevamento e la gestione dei connettori</block>
   <block id="8ab7236e714d67d0d2cdb0f6c0c6bdea" category="list-text">Il cluster on-premise deve eseguire ONTAP 8.3 o versione successiva.</block>
   <block id="95ef150c4c1c6bc6be1dda757b58c70c" category="list-text">Un connettore deve essere installato in un cloud provider o on-premise.</block>
   <block id="cb754929bd2884eb53bfc39ddd5aadad" category="paragraph">Se si desidera eseguire il tiering dei dati cold nel cloud, è necessario esaminare i requisiti per il connettore in base alla posizione in cui si prevede di eseguire il tiering dei dati cold.</block>
   <block id="e6e80588e9fe7cf89218fea44300f7ca" category="inline-link">Scopri di più sui connettori</block>
-  <block id="c870531773e82c374eb4125c8029e25e" category="inline-link">Passaggio da un connettore all'altro</block>
   <block id="e920ef862d77b3f54bb7bf3e535062a3" category="inline-link">Scopri di più sul tiering BlueXP</block>
   <block id="b06972aadece5eaa3ac9cc962a035477" category="list-text">L'host del connettore deve consentire l'accesso HTTPS in uscita attraverso la porta 443.</block>
   <block id="2b9e44ec073f65b2847ecb4d29f27fb3" category="paragraph">Se il connettore si trova nel cloud, tutte le comunicazioni in uscita sono consentite dal gruppo di sicurezza predefinito.</block>
-  <block id="474308686741d3fac3585fee76ea82cb" category="section-title">Requisiti per il rilevamento e la gestione diretti</block>
   <block id="971b56bb19698ede33f8f4ef782f3774" category="list-text">Il cluster on-premise deve eseguire ONTAP 9.12.1 o versione successiva.</block>
   <block id="d8140eebe21fbc87913a211d15aa72f0" category="list-text">Il cluster deve disporre di connettività in entrata e in uscita al servizio BlueXP:</block>
   <block id="3693065b074c131d0dd4c103327a1d7b" category="paragraph">https://cloudmanager.cloud.netapp.com/ontap-service/check-service-connection</block>
   <block id="03be90bdc455bf51f8b56b71203c2e11" category="list-text">Il computer utilizzato per accedere alla console BlueXP deve disporre di una connessione di rete al cluster ONTAP on-premise, simile a quella utilizzata per fornire connessioni ad altre risorse della rete privata.</block>
-  <block id="20dbb48f93e265cf5e1f55346fd44629" category="section-title">Scopri i cluster</block>
-  <block id="16708274774701d9897c9865da185258" category="paragraph">Scopri i tuoi cluster ONTAP on-premise da Canvas in BlueXP. Quando si avvia il processo di rilevamento, BlueXP rileva il cluster come segue:</block>
-  <block id="a1a1b3734bc79dc28eff3fad266ee579" category="list-text">Se si dispone di un connettore attivo che dispone di una connessione al cluster ONTAP, BlueXP utilizzerà tale connettore per rilevare e gestire il cluster.</block>
   <block id="1f98df6cf22b8e11ecbe762c7b523860" category="list-text">Se non si dispone di un connettore o se il connettore non dispone di una connessione al cluster ONTAP, BlueXP utilizzerà automaticamente l'opzione di rilevamento e gestione diretta.</block>
-  <block id="7d613f340824eb9c65d2bc768aa43577" category="list-text">Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e selezionare *on-premise*.</block>
   <block id="2901a10a7b1d7a91ad19913b88e371a6" category="list-text">Accanto a on-premise ONTAP, selezionare *Discover*.</block>
   <block id="1de006c684d29369fa4392137f9a3894" category="list-text">Nella pagina _Discover_, inserire l'indirizzo IP di gestione del cluster e la password per l'account utente admin.</block>
   <block id="f7372fe2a1c7b50e7c7d583296559005" category="list-text">Se si rileva direttamente il cluster (senza un connettore), selezionare *Save the credentials* (Salva le credenziali).</block>
-  <block id="da8239e44e04f0173e627074f8abe90c" category="paragraph">Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nel tuo account.</block>
   <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">Selezionare *Discover*.</block>
   <block id="150f022493510e4fc7851b23e0afdee7" category="paragraph">BlueXP rileva il cluster e lo aggiunge come ambiente di lavoro su Canvas. È ora possibile iniziare a gestire il cluster.</block>
   <block id="299867ed6070a6cda18ae92e5d434213" category="inline-link-macro">Scopri come gestire i cluster rilevati direttamente</block>
@@ -473,7 +459,6 @@
   <block id="468caeffde72f6e5b0fda6369c3f5f0d" category="paragraph"><block ref="468caeffde72f6e5b0fda6369c3f5f0d" category="inline-link-rx"></block></block>
   <block id="0377f2dd7cfc90832cf86e4cdea18b27" category="paragraph"><block ref="0377f2dd7cfc90832cf86e4cdea18b27" category="inline-link-rx"></block></block>
   <block id="02156a4727415877195dc5302fa69275" category="list-text"><block ref="02156a4727415877195dc5302fa69275" category="inline-link-rx"></block></block>
-  <block id="2aeeba0020a7848f7902186fbd8cb9e8" category="list-text"><block ref="2aeeba0020a7848f7902186fbd8cb9e8" category="inline-link-rx"></block></block>
   <block id="0831a12ebe326ec4e6566367bf5ee293" category="list-text"><block ref="0831a12ebe326ec4e6566367bf5ee293" category="inline-link-rx"></block></block>
   <block id="6456f90a24e3ce74e10fac140453a9e4" category="paragraph"><block ref="6456f90a24e3ce74e10fac140453a9e4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="31704fc30eb2f5485c6844b2921554ff" category="paragraph"><block ref="9ff7898ac3309c19fb8d99f370e44be1" category="inline-link-rx"></block>.</block>
@@ -521,4 +506,46 @@
   <block id="39f382b97080640c75604b5890f3a5d3" category="paragraph">L'associazione delle credenziali NSS all'account BlueXP è diversa dall'account NSS associato a un account utente BlueXP.</block>
   <block id="e3bc6d35311568d55f1c8ea11984b964" category="paragraph">Queste credenziali NSS sono associate all'ID account BlueXP specifico. Gli utenti che appartengono all'account BlueXP possono accedere a queste credenziali da *Support &gt; NSS Management*.</block>
   <block id="37ec2d4ffcb59f0218e30feb37bff04e" category="paragraph">Se non si dispone di un connettore e l'indirizzo IP non è raggiungibile da BlueXP, viene richiesto di creare un connettore.</block>
+  <block id="f73b546b2cf111d3a080443f2cd3b97f" category="section-title">2 luglio 2023</block>
+  <block id="11f4fef53a39b0e83d4fdb9f922e768e" category="section-title">Rilevamento cluster da My estate</block>
+  <block id="4573c689742769edc01e3f45205fd784" category="paragraph">Ora puoi scoprire i cluster ONTAP on-premise da *Canvas &gt; My estate* selezionando un cluster che BlueXP ha scoperto in base ai cluster ONTAP associati all'indirizzo e-mail per il tuo login BlueXP.</block>
+  <block id="5a7621b5dce7d879d4fc86499c34c6e6" category="inline-link">Scopri come scoprire i cluster dalla pagina My estate</block>
+  <block id="92adae4e241e70163adb8c5469771a82" category="paragraph"><block ref="24b3a807a9407b81f5101322f988421d" category="inline-link-rx"></block>.</block>
+  <block id="0955e7586176682941c1bba912eb5cc4" category="paragraph">BlueXP offre due opzioni di rilevamento e gestione per cluster ONTAP on-premise:</block>
+  <block id="58bc91c6986031a5bbfcc403ec8f4e40" category="list-text">Rilevamento e gestione mediante un connettore</block>
+  <block id="c0dfb4f052c58a84c6f41e4a6de3caae" category="list-text">Integrazione con i servizi BlueXP che offrono replica dei dati, backup e ripristino, classificazione dei dati e tiering dei dati</block>
+  <block id="ed2669e12a2aca1d23d0391fe9aa4d4f" category="list-text">Rilevamento e gestione diretti</block>
+  <block id="551bc5d8466ddd3cdacf44099db1c7ab" category="list-text">Questa opzione consente di gestire i cluster che eseguono ONTAP 9.12.1 e versioni successive utilizzando Gestione sistema. Non sono disponibili altre opzioni di gestione. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi BlueXP.</block>
+  <block id="6e66f27267404b1c78540790e471bc32" category="paragraph">Prima di scoprire i cluster ONTAP on-premise, assicurarsi di aver soddisfatto i seguenti requisiti.</block>
+  <block id="860b5a921910be87e98249197300aeb3" category="section-title">Requisiti per il rilevamento dei connettori</block>
+  <block id="2c907b6caf1e28d6079ea82a7c2dae43" category="inline-link">Scopri come passare da un connettore all'altro</block>
+  <block id="80cc9f0ae996b19f3dc87ec1e851b9fc" category="list-text"><block ref="80cc9f0ae996b19f3dc87ec1e851b9fc" category="inline-link-rx"></block></block>
+  <block id="be8c0cb1018ac37d4931901b25f4d7b8" category="section-title">Requisiti per il rilevamento diretto</block>
+  <block id="381ebbd947b85d55ba63ca069f4fd6e2" category="section-title">Individuare un cluster</block>
+  <block id="5929920680ed1fe51a421ba27720d080" category="paragraph">Scopri i tuoi cluster ONTAP on-premise da Canvas fornendo manualmente i dettagli sul cluster o selezionando un cluster pre-scoperto dalla pagina My estate.</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">A proposito di questa attività</block>
+  <block id="b5dd4f91cc6db2ca2f45e3bb102fb889" category="list-text">È possibile avviare il processo di rilevamento in due modi:</block>
+  <block id="e2283afc49db55afcdc12825748b74cc" category="list-text">Da *Canvas &gt; My Working Environments* aggiungendo manualmente i dettagli sul cluster ONTAP on-premise.</block>
+  <block id="a5c0c470fe95d7a64c3b5fcb2a94828e" category="list-text">Da *Canvas &gt; My estate* selezionando un cluster che BlueXP ha scoperto in base ai cluster ONTAP associati all'indirizzo e-mail per l'accesso a BlueXP.</block>
+  <block id="2e064277badcd21c62e8fd2c2f433487" category="list-text">Quando si avvia il processo di rilevamento, BlueXP rileva un cluster come segue:</block>
+  <block id="070663698acc2c2608384f63852f1471" category="list-text">Se si dispone di un connettore attivo che dispone di una connessione a un cluster ONTAP, BlueXP utilizzerà tale connettore per rilevare e gestire il cluster.</block>
+  <block id="c77ba8df974ac9ac198176dcff4f8f52" category="section-title">Rilevare un cluster manualmente</block>
+  <block id="8c3cbd392f1e7d6c008b581f7fc4fc9b" category="paragraph">Individuare un cluster ONTAP on-premise in BlueXP inserendo l'indirizzo IP di gestione del cluster e la password per l'account utente admin.</block>
+  <block id="4e206327ecb5a9834b615078326acaec" category="list-text">Nella pagina Canvas, selezionare *Aggiungi ambiente di lavoro &gt; on-premise*.</block>
+  <block id="744a5b98e0d4825f191a9e89b609949c" category="paragraph">Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'accesso utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nell'account BlueXP.</block>
+  <block id="50bc63d3ce96c1c059c531930e9b1ccc" category="section-title">Aggiungere un cluster già scoperto</block>
+  <block id="9531ad82bf5dc45f66f60a601474ec73" category="paragraph">BlueXP rileva automaticamente le informazioni sui cluster ONTAP associati all'indirizzo e-mail per l'accesso a BlueXP e le visualizza nella pagina *My estate* come cluster non rilevati. È possibile visualizzare l'elenco dei cluster non rilevati e aggiungerli uno alla volta.</block>
+  <block id="8b88ed64b6b30080910756ab3a0ea719" category="paragraph">Tenere presente quanto segue sui cluster ONTAP on-premise visualizzati nella pagina My estate:</block>
+  <block id="06730fe7ddb260af67563763fb1cff3f" category="list-text">L'indirizzo e-mail utilizzato per accedere a BlueXP deve essere associato a un account registrato del sito di supporto NetApp (NSS).</block>
+  <block id="05df8b76be995f5a9cfa0f9805c5c671" category="list-text">Se si accede a BlueXP con l'account NSS e si accede alla pagina My estate, BlueXP utilizza tale account NSS per trovare i cluster associati all'account.</block>
+  <block id="17579109afe537b92b0d58dc1b3a2261" category="list-text">Se si accede a BlueXP con un account cloud e si accede alla pagina My estate, BlueXP richiede di verificare l'e-mail. Se tale indirizzo e-mail è associato a un account NSS, BlueXP utilizza tali informazioni per individuare i cluster associati all'account.</block>
+  <block id="cf28359d03fa5d995d85df0a5ebb62c8" category="list-text">BlueXP mostra solo i cluster ONTAP che hanno inviato correttamente messaggi AutoSupport a NetApp.</block>
+  <block id="9e5b23122dc2a6feb6587ea531e0634e" category="list-text">Per aggiornare l'elenco di inventario, uscire dalla pagina My estate, attendere 5 minuti, quindi tornare alla pagina.</block>
+  <block id="0c136b2a4c8e3fbb938288c9e135d82b" category="list-text">Selezionare *My estate*.</block>
+  <block id="ff24e889350068d5df46c75b1da1f5af" category="list-text">Nella pagina My estate, selezionare *Discover* per on-premise ONTAP.</block>
+  <block id="eb0bc6fee7fc89460407cbab71c71faf" category="inline-image-macro">Una schermata della pagina My estate che mostra 12 cluster ONTAP on-premise non scoperti.</block>
+  <block id="9ea83282503d3d948b041ef70d87101f" category="paragraph"><block ref="9ea83282503d3d948b041ef70d87101f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7689e37bac08b82f66558bf21e5ea57d" category="list-text">Selezionare un cluster, quindi selezionare *Discover*.</block>
+  <block id="f44b1e23b4e1566aa16d4b2b0be52eb8" category="paragraph"><block ref="f44b1e23b4e1566aa16d4b2b0be52eb8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eecdf85dabb12fb229d35075dd322550" category="list-text">Inserire la password per l'account utente admin.</block>
 </blocks>

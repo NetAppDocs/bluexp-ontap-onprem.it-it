@@ -18,6 +18,18 @@ Scopri le novità della gestione dei cluster ONTAP on-premise in BlueXP.
 
 
 
+== 2 luglio 2023
+
+
+
+=== Rilevamento cluster da My estate
+
+Ora puoi scoprire i cluster ONTAP on-premise da *Canvas > My estate* selezionando un cluster che BlueXP ha scoperto in base ai cluster ONTAP associati all'indirizzo e-mail per il tuo login BlueXP.
+
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html#add-a-pre-discovered-cluster["Scopri come scoprire i cluster dalla pagina My estate"].
+
+
+
 == 4 maggio 2023
 
 

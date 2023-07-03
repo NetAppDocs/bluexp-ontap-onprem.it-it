@@ -20,20 +20,20 @@ Scopri i cluster ONTAP on-premise di BlueXP per iniziare a gestire i volumi ed e
 
 == Opzioni di rilevamento e gestione
 
-BlueXP offre due modi per rilevare e gestire i cluster ONTAP on-premise:
+BlueXP offre due opzioni di rilevamento e gestione per cluster ONTAP on-premise:
 
-Rilevamento attraverso un connettore:: Questa opzione consente di gestire i cluster che eseguono ONTAP 8.3 e versioni successive utilizzando le seguenti funzionalità:
+Rilevamento e gestione mediante un connettore:: Questa opzione consente di gestire i cluster che eseguono ONTAP 8.3 e versioni successive utilizzando le seguenti funzionalità:
 +
 --
 * La vista Standard, che fornisce le operazioni di base del volume
 * La visualizzazione avanzata, che consente la gestione tramite Gestione di sistema (supportata con ONTAP 9.10.0 e versioni successive)
-* Integrazione con i servizi BlueXP, che offrono replica dei dati, backup e ripristino, classificazione dei dati e tiering dei dati
+* Integrazione con i servizi BlueXP che offrono replica dei dati, backup e ripristino, classificazione dei dati e tiering dei dati
 
 
 Questa opzione richiede un connettore, che è possibile installare in un cloud provider o on-premise.
 
 --
-Rilevamento diretto:: Questa opzione consente di gestire i cluster che eseguono ONTAP 9.12.1 e versioni successive utilizzando Gestione sistema. Non sono disponibili altre opzioni di gestione. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi dati.
+Rilevamento e gestione diretti:: Questa opzione consente di gestire i cluster che eseguono ONTAP 9.12.1 e versioni successive utilizzando Gestione sistema. Non sono disponibili altre opzioni di gestione. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi BlueXP.
 +
 --
 Questa opzione non richiede un connettore.
@@ -51,7 +51,7 @@ Se si decide di utilizzare l'altra opzione di rilevamento in un secondo momento,
 
 == Requisiti
 
-Prima di scoprire il cluster ONTAP on-premise, assicurarsi di aver soddisfatto i seguenti requisiti.
+Prima di scoprire i cluster ONTAP on-premise, assicurarsi di aver soddisfatto i seguenti requisiti.
 
 
 
@@ -70,7 +70,7 @@ Il criterio firewall predefinito "mgmt" consente l'accesso HTTPS in entrata da t
 
 
 
-=== Requisiti per il rilevamento e la gestione dei connettori
+=== Requisiti per il rilevamento dei connettori
 
 * Il cluster on-premise deve eseguire ONTAP 8.3 o versione successiva.
 * Un connettore deve essere installato in un cloud provider o on-premise.
@@ -79,7 +79,7 @@ Se si desidera eseguire il tiering dei dati cold nel cloud, è necessario esamin
 
 +
 ** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Scopri di più sui connettori"^]
-** https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["Passaggio da un connettore all'altro"^]
+** https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["Scopri come passare da un connettore all'altro"^]
 ** https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Scopri di più sul tiering BlueXP"^]
 
 
@@ -91,7 +91,7 @@ Se il connettore si trova nel cloud, tutte le comunicazioni in uscita sono conse
 
 
 
-=== Requisiti per il rilevamento e la gestione diretti
+=== Requisiti per il rilevamento diretto
 
 * Il cluster on-premise deve eseguire ONTAP 9.12.1 o versione successiva.
 * Il cluster deve disporre di connettività in entrata e in uscita al servizio BlueXP:
@@ -103,23 +103,84 @@ https://cloudmanager.cloud.netapp.com/ontap-service/check-service-connection
 
 
 
-== Scopri i cluster
+== Individuare un cluster
 
-Scopri i tuoi cluster ONTAP on-premise da Canvas in BlueXP. Quando si avvia il processo di rilevamento, BlueXP rileva il cluster come segue:
+Scopri i tuoi cluster ONTAP on-premise da Canvas fornendo manualmente i dettagli sul cluster o selezionando un cluster pre-scoperto dalla pagina My estate.
 
-* Se si dispone di un connettore attivo che dispone di una connessione al cluster ONTAP, BlueXP utilizzerà tale connettore per rilevare e gestire il cluster.
-* Se non si dispone di un connettore o se il connettore non dispone di una connessione al cluster ONTAP, BlueXP utilizzerà automaticamente l'opzione di rilevamento e gestione diretta.
+.A proposito di questa attività
+* È possibile avviare il processo di rilevamento in due modi:
++
+** Da *Canvas > My Working Environments* aggiungendo manualmente i dettagli sul cluster ONTAP on-premise.
+** Da *Canvas > My estate* selezionando un cluster che BlueXP ha scoperto in base ai cluster ONTAP associati all'indirizzo e-mail per l'accesso a BlueXP.
 
+
+* Quando si avvia il processo di rilevamento, BlueXP rileva un cluster come segue:
++
+** Se si dispone di un connettore attivo che dispone di una connessione a un cluster ONTAP, BlueXP utilizzerà tale connettore per rilevare e gestire il cluster.
+** Se non si dispone di un connettore o se il connettore non dispone di una connessione al cluster ONTAP, BlueXP utilizzerà automaticamente l'opzione di rilevamento e gestione diretta.
+
+
+
+
+
+
+=== Rilevare un cluster manualmente
+
+Individuare un cluster ONTAP on-premise in BlueXP inserendo l'indirizzo IP di gestione del cluster e la password per l'account utente admin.
 
 .Fasi
 . Dal menu di navigazione, selezionare *Storage > Canvas*.
-. Nella pagina Canvas, fare clic su *Add Working Environment* (Aggiungi ambiente di lavoro) e selezionare *on-premise*.
+. Nella pagina Canvas, selezionare *Aggiungi ambiente di lavoro > on-premise*.
 . Accanto a on-premise ONTAP, selezionare *Discover*.
 . Nella pagina _Discover_, inserire l'indirizzo IP di gestione del cluster e la password per l'account utente admin.
 . Se si rileva direttamente il cluster (senza un connettore), selezionare *Save the credentials* (Salva le credenziali).
 +
-Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nel tuo account.
+Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'accesso utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nell'account BlueXP.
 
+. Selezionare *Discover*.
++
+Se non si dispone di un connettore e l'indirizzo IP non è raggiungibile da BlueXP, viene richiesto di creare un connettore.
+
+
+
+.Risultato
+BlueXP rileva il cluster e lo aggiunge come ambiente di lavoro su Canvas. È ora possibile iniziare a gestire il cluster.
+
+* link:task-manage-ontap-direct.html["Scopri come gestire i cluster rilevati direttamente"]
+* link:task-manage-ontap-connector.html["Scopri come gestire i cluster rilevati con un connettore"]
+
+
+
+
+=== Aggiungere un cluster già scoperto
+
+BlueXP rileva automaticamente le informazioni sui cluster ONTAP associati all'indirizzo e-mail per l'accesso a BlueXP e le visualizza nella pagina *My estate* come cluster non rilevati. È possibile visualizzare l'elenco dei cluster non rilevati e aggiungerli uno alla volta.
+
+.A proposito di questa attività
+Tenere presente quanto segue sui cluster ONTAP on-premise visualizzati nella pagina My estate:
+
+* L'indirizzo e-mail utilizzato per accedere a BlueXP deve essere associato a un account registrato del sito di supporto NetApp (NSS).
++
+** Se si accede a BlueXP con l'account NSS e si accede alla pagina My estate, BlueXP utilizza tale account NSS per trovare i cluster associati all'account.
+** Se si accede a BlueXP con un account cloud e si accede alla pagina My estate, BlueXP richiede di verificare l'e-mail. Se tale indirizzo e-mail è associato a un account NSS, BlueXP utilizza tali informazioni per individuare i cluster associati all'account.
+
+
+* BlueXP mostra solo i cluster ONTAP che hanno inviato correttamente messaggi AutoSupport a NetApp.
+* Per aggiornare l'elenco di inventario, uscire dalla pagina My estate, attendere 5 minuti, quindi tornare alla pagina.
+
+
+.Fasi
+. Dal menu di navigazione, selezionare *Storage > Canvas*.
+. Selezionare *My estate*.
+. Nella pagina My estate, selezionare *Discover* per on-premise ONTAP.
++
+image:screenshot-my-estate-ontap.png["Una schermata della pagina My estate che mostra 12 cluster ONTAP on-premise non scoperti."]
+
+. Selezionare un cluster, quindi selezionare *Discover*.
++
+image:screenshot-my-estate-ontap-discover.png["Una schermata della pagina My estate che mostra 12 cluster ONTAP on-premise non scoperti."]
+
+. Inserire la password per l'account utente admin.
 . Selezionare *Discover*.
 +
 Se non si dispone di un connettore e l'indirizzo IP non è raggiungibile da BlueXP, viene richiesto di creare un connettore.
