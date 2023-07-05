@@ -280,7 +280,6 @@
   <block id="fdc54b68e260b5861ecabd7cfd437124" category="paragraph"><block ref="fdc54b68e260b5861ecabd7cfd437124" category="inline-image-macro-rx" type="image"></block></block>
   <block id="40b851aafab82c78484c46169f816fd2" category="list-text">Fare clic su *Remove* (Rimuovi) per confermare.</block>
   <block id="6568b62a7d7e403aa25f80da4df48e9a" category="summary">Gestisci i tuoi sistemi NetApp AFF e FAS da BlueXP per eseguire il provisioning dello storage, replicare i dati e configurare servizi dati critici basati sul cloud.</block>
-  <block id="9ac91148b1f0257152bc376ab38bf436" category="doc">Documentazione del cluster ONTAP on-premise</block>
   <block id="f38bfe4e4ca70348bab102b16fa118d4" category="summary">Scopri le novità della gestione dei cluster ONTAP on-premise in BlueXP.</block>
   <block id="b2eb7fa62697c601a5dc03cfa8317323" category="doc">Novità dei cluster ONTAP on-premise</block>
   <block id="7e43a762816453626bbf35533afa1755" category="section-title">4 maggio 2023</block>
@@ -548,4 +547,5 @@
   <block id="7689e37bac08b82f66558bf21e5ea57d" category="list-text">Selezionare un cluster, quindi selezionare *Discover*.</block>
   <block id="f44b1e23b4e1566aa16d4b2b0be52eb8" category="paragraph"><block ref="f44b1e23b4e1566aa16d4b2b0be52eb8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eecdf85dabb12fb229d35075dd322550" category="list-text">Inserire la password per l'account utente admin.</block>
+  <block id="3f155fde095b56c33aa16ebcf24a5d94" category="doc">Gestione del cluster ONTAP on-premise con BlueXP</block>
 </blocks>

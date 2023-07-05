@@ -5,7 +5,7 @@ permalink: index.html
 lead: Manage your NetApp AFF and FAS systems from BlueXP to provision storage, replicate data, and configure critical cloud-based data services. 
 summary: Gestisci i tuoi sistemi NetApp AFF e FAS da BlueXP per eseguire il provisioning dello storage, replicare i dati e configurare servizi dati critici basati sul cloud. 
 ---
-= Documentazione del cluster ONTAP on-premise
+= Gestione del cluster ONTAP on-premise con BlueXP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
