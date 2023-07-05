@@ -537,7 +537,6 @@
   <block id="8b88ed64b6b30080910756ab3a0ea719" category="paragraph">Tenere presente quanto segue sui cluster ONTAP on-premise visualizzati nella pagina My estate:</block>
   <block id="06730fe7ddb260af67563763fb1cff3f" category="list-text">L'indirizzo e-mail utilizzato per accedere a BlueXP deve essere associato a un account registrato del sito di supporto NetApp (NSS).</block>
   <block id="05df8b76be995f5a9cfa0f9805c5c671" category="list-text">Se si accede a BlueXP con l'account NSS e si accede alla pagina My estate, BlueXP utilizza tale account NSS per trovare i cluster associati all'account.</block>
-  <block id="17579109afe537b92b0d58dc1b3a2261" category="list-text">Se si accede a BlueXP con un account cloud e si accede alla pagina My estate, BlueXP richiede di verificare l'e-mail. Se tale indirizzo e-mail è associato a un account NSS, BlueXP utilizza tali informazioni per individuare i cluster associati all'account.</block>
   <block id="cf28359d03fa5d995d85df0a5ebb62c8" category="list-text">BlueXP mostra solo i cluster ONTAP che hanno inviato correttamente messaggi AutoSupport a NetApp.</block>
   <block id="9e5b23122dc2a6feb6587ea531e0634e" category="list-text">Per aggiornare l'elenco di inventario, uscire dalla pagina My estate, attendere 5 minuti, quindi tornare alla pagina.</block>
   <block id="0c136b2a4c8e3fbb938288c9e135d82b" category="list-text">Selezionare *My estate*.</block>
@@ -548,4 +547,5 @@
   <block id="f44b1e23b4e1566aa16d4b2b0be52eb8" category="paragraph"><block ref="f44b1e23b4e1566aa16d4b2b0be52eb8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eecdf85dabb12fb229d35075dd322550" category="list-text">Inserire la password per l'account utente admin.</block>
   <block id="3f155fde095b56c33aa16ebcf24a5d94" category="doc">Gestione del cluster ONTAP on-premise con BlueXP</block>
+  <block id="9db4c476e2e5483cdbf8e71023278b72" category="list-text">Se si accede a BlueXP con un account cloud o una connessione federata e si accede alla pagina My estate, BlueXP richiede di verificare l'e-mail. Se tale indirizzo e-mail è associato a un account NSS, BlueXP utilizza tali informazioni per individuare i cluster associati all'account.</block>
 </blocks>
