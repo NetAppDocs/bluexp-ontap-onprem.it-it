@@ -25,7 +25,7 @@ Alcune funzionalità di System Manager non sono supportate da BlueXP.
 link:reference-limitations.html["Esaminare l'elenco delle limitazioni"].
 
 .Fasi
-. Nella pagina Canvas, fare doppio clic sul nome di un ambiente di lavoro ONTAP on-premise.
+. Nella pagina Canvas, selezionare l'ambiente di lavoro ONTAP on-premise.
 +
 L'icona dell'ambiente di lavoro identifica i cluster rilevati direttamente:
 

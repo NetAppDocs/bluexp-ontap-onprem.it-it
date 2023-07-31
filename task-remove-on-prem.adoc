@@ -19,10 +19,10 @@ Rimuovere un ambiente di lavoro ONTAP on-premise se non si desidera più gestirl
 La rimozione dell'ambiente di lavoro non influisce sul cluster ONTAP. Puoi riscoprirlo da BlueXP in qualsiasi momento.
 
 .Fasi
-. Nella pagina Canvas, fare doppio clic sul nome dell'ambiente di lavoro ONTAP on-premise.
-. Fare clic sull'icona del menu e selezionare *Rimuovi dall'area di lavoro*.
+. Nella pagina Canvas, selezionare l'ambiente di lavoro ONTAP on-premise.
+. Selezionare l'icona del menu e selezionare *Rimuovi dall'area di lavoro*.
 +
 image:screenshot_remove_onprem.png["Una schermata che mostra il menu in alto a destra della pagina e l'opzione Rimuovi."]
 
-. Fare clic su *Remove* (Rimuovi) per confermare.
+. Selezionare *Rimuovi* per confermare.
 

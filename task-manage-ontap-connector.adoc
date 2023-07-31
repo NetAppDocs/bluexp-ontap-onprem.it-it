@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-manage-ontap-connector.html 
-keywords: system manager, advanced view, access system manager, load system manager, use system manager 
+keywords: system manager, advanced view, access system manager, load system manager, use system manager, flexgroup, flexgroup volumes, create flexgroup volume 
 summary: 'Se è necessario eseguire una gestione avanzata di un cluster ONTAP on-premise, è possibile farlo utilizzando Gestione di sistema di ONTAP, un"interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l"interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.' 
 ---
 = Gestire i cluster ONTAP on-premise rilevati con un connettore
@@ -24,9 +24,9 @@ Se un ambiente di lavoro è stato rilevato direttamente, l'icona dell'ambiente d
 
 
 
-== Creare volumi dalla vista Standard
+== Creare volumi FlexVol dalla vista standard
 
-Dopo aver scoperto il cluster ONTAP on-premise di BlueXP utilizzando un connettore, è possibile aprire l'ambiente di lavoro per eseguire il provisioning e la gestione dello storage.
+Dopo aver scoperto il cluster ONTAP on-premise di BlueXP utilizzando un connettore, è possibile aprire l'ambiente di lavoro per eseguire il provisioning e la gestione dei volumi FlexVol.
 
 
 
@@ -38,8 +38,8 @@ Una funzionalità di BlueXP chiamata "modelli" consente di creare volumi ottimiz
 
 .Fasi
 . Dal menu di navigazione, selezionare *Storage > Canvas*.
-. Nella pagina Canvas, fare doppio clic sul nome del cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
-. Fare clic su *Volumes > Add Volume* (volumi > Aggiungi volume)
+. Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
+. Selezionare *Volumes (volumi) > Add Volume (Aggiungi volume)*.
 . Seguire i passaggi della procedura guidata per creare il volume.
 +
 .. *Dettagli, protezione e tag*: Inserisci i dettagli del volume come il nome e le dimensioni, scegli una policy Snapshot e specifica i tag del volume, se lo desideri.
@@ -76,7 +76,7 @@ Il seguente elenco descrive i campi per i quali potrebbe essere necessario forni
 | Permessi e utenti/gruppi | Questi campi consentono di controllare il livello di accesso a una condivisione SMB per utenti e gruppi (detti anche elenchi di controllo degli accessi o ACL). È possibile specificare utenti o gruppi Windows locali o di dominio, utenti o gruppi UNIX. Se si specifica un nome utente Windows di dominio, è necessario includere il dominio dell'utente utilizzando il formato dominio/nome utente. 
 |===
 .. *Usage Profile* (Profilo di utilizzo): Scegliere se attivare o disattivare le funzionalità di efficienza dello storage sul volume per ridurre la quantità totale di storage necessaria.
-.. *Revisione*: Esaminare i dettagli relativi al volume, quindi fare clic su *Aggiungi*.
+.. *Revisione*: Esaminare i dettagli relativi al volume, quindi selezionare *Aggiungi*.
 
 
 
@@ -93,12 +93,12 @@ Il modello dovrebbe semplificare il lavoro, in quanto alcuni parametri del volum
 NOTE: È possibile creare volumi NFS o CIFS solo quando si utilizzano modelli.
 
 .Fasi
-. Nella pagina Canvas, fare clic sul nome del sistema ONTAP on-premise sul quale si desidera eseguire il provisioning di un volume.
-. Fare clic su image:screenshot_gallery_options.gif["Un'icona con tre punti."] > *Aggiungi volume da modello*.
+. Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
+. Selezionare image:screenshot_gallery_options.gif["Un'icona con tre punti."] > *Aggiungi volume da modello*.
 +
 image:screenshot_template_add_vol_ontap.png["Una schermata che mostra come aggiungere un nuovo volume da un modello."]
 
-. Nella pagina _Select Template_, selezionare il modello che si desidera utilizzare per creare il volume e fare clic su *Next* (Avanti).
+. Nella pagina _Select Template_, selezionare il modello che si desidera utilizzare per creare il volume e selezionare *Next* (Avanti).
 +
 image:screenshot_select_template_ontap.png["Una schermata dei modelli di applicazione disponibili."]
 
@@ -109,14 +109,14 @@ Viene visualizzata la pagina _define Parameters_.
 image:screenshot_define_ontap_vol_from_template.png["Una schermata che mostra un modello vuoto da compilare per creare un volume."]
 
 +
-*Nota:* è possibile fare clic sulla casella di controllo *Mostra parametri di sola lettura* per visualizzare tutti i campi bloccati dal modello se si desidera visualizzare i valori di tali parametri. Per impostazione predefinita, questi campi predefiniti sono nascosti e vengono visualizzati solo i campi da completare.
+*Nota:* è possibile selezionare la casella di controllo *Mostra parametri di sola lettura* per visualizzare tutti i campi bloccati dal modello se si desidera visualizzare i valori di tali parametri. Per impostazione predefinita, questi campi predefiniti sono nascosti e vengono visualizzati solo i campi da completare.
 
 . Nell'area _contesto_, l'ambiente di lavoro viene compilato con il nome dell'ambiente di lavoro con cui hai iniziato. Selezionare le voci *Storage VM* e *aggregate* in cui verrà creato il volume.
 . Aggiungere valori per tutti i parametri non codificati dal modello.
 +
 <<Creare volumi,Scopri i parametri necessari per creare il volume>>.
 
-. Fare clic su *Esegui modello* dopo aver definito tutti i parametri necessari per questo volume.
+. Selezionare *Esegui modello* dopo aver definito tutti i parametri necessari per questo volume.
 
 
 .Risultato
@@ -130,6 +130,16 @@ Inoltre, se nel modello viene implementata un'azione secondaria, ad esempio l'at
 
 .Al termine
 Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le autorizzazioni per i file e le cartelle e verificare che tali utenti possano accedere alla condivisione e creare un file.
+
+
+
+== Creare volumi FlexGroup
+
+È possibile utilizzare l'API BlueXP per creare volumi FlexGroup. Un volume FlexGroup è un volume scale-out che offre performance elevate insieme alla distribuzione automatica del carico.
+
+* https://docs.netapp.com/us-en/bluexp-automation/cm/wf_flexgroup_ontap_create_vol.html["Scopri come creare un volume FlexGroup utilizzando l'API"^]
+* https://docs.netapp.com/us-en/ontap/flexgroup/definition-concept.html["Scopri cos'è un volume FlexGroup"^]
+
 
 
 
@@ -187,17 +197,17 @@ link:reference-limitations.html["Esaminare l'elenco delle limitazioni"].
 
 === Utilizzo della visualizzazione avanzata (System Manager)
 
-Aprire un ambiente di lavoro ONTAP on-premise e fare clic sull'opzione visualizzazione avanzata.
+Aprire un ambiente di lavoro ONTAP on-premise e selezionare l'opzione visualizzazione avanzata.
 
 .Fasi
-. Nella pagina Canvas, fare doppio clic sul nome di un ambiente di lavoro ONTAP on-premise.
-. In alto a destra, fare clic su *passa alla visualizzazione avanzata*.
+. Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
+. In alto a destra, selezionare *passa alla visualizzazione avanzata*.
 +
 image:screenshot-advanced-view.png["Schermata di un ambiente di lavoro ONTAP on-premise che mostra l'opzione passa alla visualizzazione avanzata."]
 
-. Se viene visualizzato il messaggio di conferma, leggerlo e fare clic su *Chiudi*.
+. Se viene visualizzato il messaggio di conferma, leggerlo e selezionare *Chiudi*.
 . Utilizzare Gestione sistema per gestire ONTAP.
-. Se necessario, fare clic su *passa alla visualizzazione standard* per tornare alla gestione standard tramite BlueXP.
+. Se necessario, selezionare *passa alla visualizzazione standard* per tornare alla gestione standard tramite BlueXP.
 +
 image:screenshot-standard-view.png["Schermata di un ambiente di lavoro ONTAP on-premise che mostra l'opzione passa alla visualizzazione standard."]
 
