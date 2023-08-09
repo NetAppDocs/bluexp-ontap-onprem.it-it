@@ -137,7 +137,7 @@ Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le 
 
 È possibile utilizzare l'API BlueXP per creare volumi FlexGroup. Un volume FlexGroup è un volume scale-out che offre performance elevate insieme alla distribuzione automatica del carico.
 
-* https://docs.netapp.com/us-en/bluexp-automation/cm/wf_flexgroup_ontap_create_vol.html["Scopri come creare un volume FlexGroup utilizzando l'API"^]
+* https://docs.netapp.com/us-en/bluexp-automation/cm/wf_onprem_flexgroup_ontap_create_vol.html["Scopri come creare un volume FlexGroup utilizzando l'API"^]
 * https://docs.netapp.com/us-en/ontap/flexgroup/definition-concept.html["Scopri cos'è un volume FlexGroup"^]
 
 
