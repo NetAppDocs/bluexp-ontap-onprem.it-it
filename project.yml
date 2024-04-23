@@ -45,28 +45,6 @@ sidebar:
       url: "/task-get-help.html"
   - title: Note legali
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: Inizia subito
-    links:
-    - title: Scopri di più sulla gestione dei cluster ONTAP on-premise
-      url: concept-onprem-ontap.html
-    - title: Scopri i cluster ONTAP
-      url: task-discovering-ontap.html
-  - title: Gestire cluster ONTAP on-premise
-    links:
-    - title: Gestire i cluster rilevati direttamente
-      url: task-manage-ontap-direct.html
-    - title: Gestire i cluster rilevati con un connettore
-      url: task-manage-ontap-connector.html
-  - title: Blog e community
-    links:
-    - title: Community NetApp
-      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
-    - title: Blog BlueXP
-      url: https://cloud.netapp.com/blog
-    - title: Webinar sul cloud
-      url: https://cloud.netapp.com/events
 product-family:
   name: BlueXP
   repo: bluexp-family

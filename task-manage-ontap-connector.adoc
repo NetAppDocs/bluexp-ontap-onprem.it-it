@@ -34,15 +34,13 @@ Dopo aver scoperto il cluster ONTAP on-premise di BlueXP utilizzando un connetto
 
 BlueXP consente di creare volumi NFS o CIFS su aggregati esistenti. Non è possibile creare nuovi aggregati su un cluster ONTAP on-premise dalla vista standard di BlueXP. È necessario utilizzare la vista avanzata per creare aggregati.
 
-Una funzionalità di BlueXP chiamata "modelli" consente di creare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, come database o servizi di streaming. Se l'organizzazione ha creato modelli di volume da utilizzare, seguire questa procedura <<Creare volumi da modelli,questi passaggi>>.
-
 .Fasi
 . Dal menu di navigazione, selezionare *Storage > Canvas*.
 . Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
 . Selezionare *Volumes (volumi) > Add Volume (Aggiungi volume)*.
 . Seguire i passaggi della procedura guidata per creare il volume.
 +
-.. *Dettagli, protezione e tag*: Inserisci i dettagli del volume come il nome e le dimensioni, scegli una policy Snapshot e specifica i tag del volume, se lo desideri.
+.. *Dettagli, protezione e tag*: Immettere i dettagli sul volume, ad esempio il nome e le dimensioni, quindi scegliere un criterio istantanea.
 +
 Alcuni dei campi di questa pagina sono esplicativi. Il seguente elenco descrive i campi per i quali potrebbe essere necessario fornire assistenza:
 
@@ -80,56 +78,6 @@ Il seguente elenco descrive i campi per i quali potrebbe essere necessario forni
 
 
 
-
-
-
-=== Creare volumi da modelli
-
-Se l'organizzazione ha creato modelli di volume ONTAP on-premise in modo da poter implementare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, seguire la procedura descritta in questa sezione.
-
-Il modello dovrebbe semplificare il lavoro, in quanto alcuni parametri del volume saranno già definiti nel modello, ad esempio tipo di disco, dimensione, protocollo, policy di snapshot e altro ancora. Quando un parametro è già predefinito, è sufficiente passare al parametro di volume successivo.
-
-
-NOTE: È possibile creare volumi NFS o CIFS solo quando si utilizzano modelli.
-
-.Fasi
-. Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
-. Selezionare image:screenshot_gallery_options.gif["Un'icona con tre punti."] > *Aggiungi volume da modello*.
-+
-image:screenshot_template_add_vol_ontap.png["Una schermata che mostra come aggiungere un nuovo volume da un modello."]
-
-. Nella pagina _Select Template_, selezionare il modello che si desidera utilizzare per creare il volume e selezionare *Next* (Avanti).
-+
-image:screenshot_select_template_ontap.png["Una schermata dei modelli di applicazione disponibili."]
-
-+
-Viene visualizzata la pagina _define Parameters_.
-
-+
-image:screenshot_define_ontap_vol_from_template.png["Una schermata che mostra un modello vuoto da compilare per creare un volume."]
-
-+
-*Nota:* è possibile selezionare la casella di controllo *Mostra parametri di sola lettura* per visualizzare tutti i campi bloccati dal modello se si desidera visualizzare i valori di tali parametri. Per impostazione predefinita, questi campi predefiniti sono nascosti e vengono visualizzati solo i campi da completare.
-
-. Nell'area _contesto_, l'ambiente di lavoro viene compilato con il nome dell'ambiente di lavoro con cui hai iniziato. Selezionare le voci *Storage VM* e *aggregate* in cui verrà creato il volume.
-. Aggiungere valori per tutti i parametri non codificati dal modello.
-+
-<<Creare volumi,Scopri i parametri necessari per creare il volume>>.
-
-. Selezionare *Esegui modello* dopo aver definito tutti i parametri necessari per questo volume.
-
-
-.Risultato
-BlueXP esegue il provisioning del volume e visualizza una pagina in modo da visualizzare l'avanzamento.
-
-image:screenshot_template_creating_resource_ontap.png["Una schermata che mostra lo stato di avanzamento della creazione del nuovo volume dal modello."]
-
-Il nuovo volume viene quindi aggiunto all'ambiente di lavoro.
-
-Inoltre, se nel modello viene implementata un'azione secondaria, ad esempio l'attivazione del backup e ripristino BlueXP sul volume, viene eseguita anche tale azione.
-
-.Quali sono le prossime novità?
-Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le autorizzazioni per i file e le cartelle e verificare che tali utenti possano accedere alla condivisione e creare un file.
 
 
 

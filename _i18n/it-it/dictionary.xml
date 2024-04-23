@@ -42,7 +42,6 @@
   <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Se disponi di un account a livello di cliente, puoi aggiungere uno o più account NSS.</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Se disponi di un account partner o reseller, puoi aggiungere uno o più account NSS, ma non possono essere aggiunti insieme agli account a livello di cliente.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Schermata del menu Help (Guida) in cui Support (Assistenza) è la prima opzione elencata</block>
-  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp utilizza Microsoft Azure Active Directory come provider di identità per i servizi di autenticazione specifici per il supporto e la concessione di licenze.</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">Nella pagina di accesso, fornire l'indirizzo e-mail e la password registrati del NetApp Support Site per eseguire il processo di autenticazione.</block>
   <block id="cbc6cc3bb022583403171b447b2a962c" category="paragraph">Queste azioni consentono a BlueXP di utilizzare il tuo account NSS per download di licenze, verifica dell'aggiornamento software e registrazioni di supporto future.</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Tenere presente quanto segue:</block>
@@ -81,11 +80,8 @@
   <block id="128f3f75e6d7b802bf2dc0276793e8f6" category="paragraph">Se un ambiente di lavoro è stato rilevato direttamente, l'icona dell'ambiente di lavoro include la parola "Direct".</block>
   <block id="1c27e11c5e65b93611e6f5ce640f8184" category="section-title">Creare volumi</block>
   <block id="afb7adc3debe75aa13a1fc4fdb7c0a81" category="paragraph">BlueXP consente di creare volumi NFS o CIFS su aggregati esistenti. Non è possibile creare nuovi aggregati su un cluster ONTAP on-premise dalla vista standard di BlueXP. È necessario utilizzare la vista avanzata per creare aggregati.</block>
-  <block id="efc4120a3fbfbea33245fb931c324492" category="inline-xref">questi passaggi</block>
-  <block id="890592abc0c43fcc710edb1dbdeaf2b3" category="paragraph">Una funzionalità di BlueXP chiamata "modelli" consente di creare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, come database o servizi di streaming. Se l'organizzazione ha creato modelli di volume da utilizzare, seguire questa procedura <block ref="841f2986c591e442944fbc4b9e18c81f" category="inline-xref-macro-rx"></block>.</block>
   <block id="69e6c31f6140607f08425260f2faecb5" category="list-text">Dal menu di navigazione, selezionare *Storage &gt; Canvas*.</block>
   <block id="108a74a6cbb575c986177039e07dc411" category="list-text">Seguire i passaggi della procedura guidata per creare il volume.</block>
-  <block id="97a34ca7d328720ed48cf2e2010985be" category="list-text">*Dettagli, protezione e tag*: Inserisci i dettagli del volume come il nome e le dimensioni, scegli una policy Snapshot e specifica i tag del volume, se lo desideri.</block>
   <block id="3b0e375a08fe94a129cba31916c9d2dc" category="paragraph">Alcuni dei campi di questa pagina sono esplicativi. Il seguente elenco descrive i campi per i quali potrebbe essere necessario fornire assistenza:</block>
   <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">Campo</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Descrizione</block>
@@ -101,29 +97,7 @@
   <block id="4f365bcd27fae641194545a5a823e30f" category="cell">Permessi e utenti/gruppi</block>
   <block id="5cd4beaa083f2301775c1a1bc84f2afc" category="cell">Questi campi consentono di controllare il livello di accesso a una condivisione SMB per utenti e gruppi (detti anche elenchi di controllo degli accessi o ACL). È possibile specificare utenti o gruppi Windows locali o di dominio, utenti o gruppi UNIX. Se si specifica un nome utente Windows di dominio, è necessario includere il dominio dell'utente utilizzando il formato dominio/nome utente.</block>
   <block id="a17ea0b6ec5074b6e385c43de80e900d" category="list-text">*Usage Profile* (Profilo di utilizzo): Scegliere se attivare o disattivare le funzionalità di efficienza dello storage sul volume per ridurre la quantità totale di storage necessaria.</block>
-  <block id="a37f6000ecd62b3a2058de32fa603d0a" category="section-title">Creare volumi da modelli</block>
-  <block id="afe466f073b1387a5eab0283552b7517" category="paragraph">Se l'organizzazione ha creato modelli di volume ONTAP on-premise in modo da poter implementare volumi ottimizzati per i requisiti di carico di lavoro per determinate applicazioni, seguire la procedura descritta in questa sezione.</block>
-  <block id="7ae492186bd46e832a6b64cff9b1575a" category="paragraph">Il modello dovrebbe semplificare il lavoro, in quanto alcuni parametri del volume saranno già definiti nel modello, ad esempio tipo di disco, dimensione, protocollo, policy di snapshot e altro ancora. Quando un parametro è già predefinito, è sufficiente passare al parametro di volume successivo.</block>
-  <block id="395f4870d887a81edabc6ad40f5a84f0" category="admonition">È possibile creare volumi NFS o CIFS solo quando si utilizzano modelli.</block>
-  <block id="6a9903314020e84e3af325216666825e" category="inline-image-macro">Un'icona con tre punti.</block>
-  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">Una schermata che mostra come aggiungere un nuovo volume da un modello.</block>
-  <block id="f5cfbd56be4d95a78f70efb70e2e9079" category="paragraph"><block ref="f5cfbd56be4d95a78f70efb70e2e9079" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">Una schermata dei modelli di applicazione disponibili.</block>
-  <block id="cfb983acad90faeddd99d211d0d05e99" category="paragraph"><block ref="cfb983acad90faeddd99d211d0d05e99" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8675916eaff2fb10955e8a3b1b14108f" category="paragraph">Viene visualizzata la pagina _define Parameters_.</block>
-  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">Una schermata che mostra un modello vuoto da compilare per creare un volume.</block>
-  <block id="19c51733b2ad780abc1dd51dfb4774d0" category="paragraph"><block ref="19c51733b2ad780abc1dd51dfb4774d0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="44e06c3ed2de64bcd539ac10a3a31173" category="list-text">Nell'area _contesto_, l'ambiente di lavoro viene compilato con il nome dell'ambiente di lavoro con cui hai iniziato. Selezionare le voci *Storage VM* e *aggregate* in cui verrà creato il volume.</block>
-  <block id="c3865611609b6bd4b2a95ed4f83f6261" category="list-text">Aggiungere valori per tutti i parametri non codificati dal modello.</block>
-  <block id="8b7f5e90385d9570cd1e8c028e829385" category="inline-xref">Scopri i parametri necessari per creare il volume</block>
-  <block id="88e156005e08cd20db096e992009e8e5" category="paragraph"><block ref="c936b096dc7fb0bdb7ac3b472aa3a0a3" category="inline-xref-macro-rx"></block>.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Risultato</block>
-  <block id="71fe7750eaf8ad346bfa5f8d17e350aa" category="paragraph">BlueXP esegue il provisioning del volume e visualizza una pagina in modo da visualizzare l'avanzamento.</block>
-  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">Una schermata che mostra lo stato di avanzamento della creazione del nuovo volume dal modello.</block>
-  <block id="1d2547b9bcbb0f13f704545fd4b3b7b0" category="paragraph"><block ref="1d2547b9bcbb0f13f704545fd4b3b7b0" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3fcf4599fd910141dcd628a7411238d5" category="paragraph">Il nuovo volume viene quindi aggiunto all'ambiente di lavoro.</block>
-  <block id="3cb732600caeb6ed3e89ade08544187b" category="paragraph">Inoltre, se nel modello viene implementata un'azione secondaria, ad esempio l'attivazione del backup e ripristino BlueXP sul volume, viene eseguita anche tale azione.</block>
-  <block id="1e57268fd975664444ddbda428e56bf7" category="paragraph">Se è stata fornita una condivisione CIFS, assegnare agli utenti o ai gruppi le autorizzazioni per i file e le cartelle e verificare che tali utenti possano accedere alla condivisione e creare un file.</block>
   <block id="dce4384ee7fa334b58b3b529933aacef" category="paragraph">Se è necessario eseguire una gestione avanzata di un cluster ONTAP on-premise, è possibile farlo utilizzando Gestione di sistema di ONTAP, un'interfaccia di gestione fornita con un sistema ONTAP. Abbiamo incluso l'interfaccia di System Manager direttamente in BlueXP, in modo che non sia necessario lasciare BlueXP per una gestione avanzata.</block>
   <block id="74593b49f99b6e21d38ca3d969b213f3" category="paragraph">Questa visualizzazione avanzata è disponibile come anteprima. Intendiamo perfezionare questa esperienza e aggiungere miglioramenti alle prossime release. Inviaci un feedback utilizzando la chat in-product.</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Caratteristiche</block>
@@ -340,8 +314,6 @@
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">Unisciti alla community BlueXP per seguire le discussioni in corso o crearne di nuove.</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentazione</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">La documentazione BlueXP attualmente visualizzata.</block>
-  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">Mailto:ng-cloudmanager-feedback@netapp.com[email di feedback]</block>
-  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">Diamo valore al tuo contributo. Invia un feedback per aiutarci a migliorare BlueXP.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Crea un caso con il supporto NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Oltre alle opzioni di supporto autonomo sopra descritte, puoi collaborare con uno specialista del supporto NetApp per risolvere eventuali problemi dopo l'attivazione del supporto.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Prima di iniziare</block>
@@ -388,16 +360,11 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Novità</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Inizia subito</block>
   <block id="7a57cd895ed6c692c6eaacc459f5c5b2" category="sidebar">Scopri di più sulla gestione dei cluster ONTAP on-premise</block>
-  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="sidebar">Scopri i cluster ONTAP</block>
   <block id="019323681c39b462d0fd30312fc741c2" category="sidebar">Gestire cluster ONTAP on-premise</block>
   <block id="86c7810a751199da86e2984eefab0cbf" category="sidebar">Gestire i cluster rilevati direttamente</block>
   <block id="d7bca90a91d0f08eecc40f650240e677" category="sidebar">Gestire i cluster rilevati con un connettore</block>
   <block id="d3db502b671c154b98dfced0b397de36" category="sidebar">Visualizzare le informazioni sul cluster e i dettagli del contratto</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Conoscenza e supporto</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
   <block id="52ba8ac12050d2494572b940a0d65b25" category="paragraph"><block ref="52ba8ac12050d2494572b940a0d65b25" category="inline-link-rx"></block></block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="list-text"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="2e0c742f4616eb27b5b7646aa790edfe" category="list-text"><block ref="2e0c742f4616eb27b5b7646aa790edfe" category="inline-link-macro-rx"></block></block>
@@ -511,10 +478,6 @@
   <block id="8d2b311f9b9d9270715e282b3f9a0738" category="list-text">Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.</block>
   <block id="ba426b409f9ec6763d7b1ecebd5d576f" category="list-text">Selezionare *Volumes (volumi) &gt; Add Volume (Aggiungi volume)*.</block>
   <block id="b664e4294e5d14d6fd3d39615d4e3341" category="list-text">*Revisione*: Esaminare i dettagli relativi al volume, quindi selezionare *Aggiungi*.</block>
-  <block id="41efc0cb3ec8dc0be40bd6cef8036869" category="list-text">Selezionare <block ref="8891ca04a345a35bd7da25d57718d9b7" category="inline-image-macro-rx" type="image"></block> &gt; *Aggiungi volume da modello*.</block>
-  <block id="9e1283eb7fbf6e762fdae86f50b35f77" category="list-text">Nella pagina _Select Template_, selezionare il modello che si desidera utilizzare per creare il volume e selezionare *Next* (Avanti).</block>
-  <block id="71f2916937cb366e2caf599a6feda2a1" category="paragraph">*Nota:* è possibile selezionare la casella di controllo *Mostra parametri di sola lettura* per visualizzare tutti i campi bloccati dal modello se si desidera visualizzare i valori di tali parametri. Per impostazione predefinita, questi campi predefiniti sono nascosti e vengono visualizzati solo i campi da completare.</block>
-  <block id="251cee18a5cc71eca251e760cf761ae2" category="list-text">Selezionare *Esegui modello* dopo aver definito tutti i parametri necessari per questo volume.</block>
   <block id="17946fbbcc494462c1dfafa59978ba50" category="paragraph">È possibile utilizzare l'API BlueXP per creare volumi FlexGroup. Un volume FlexGroup è un volume scale-out che offre performance elevate insieme alla distribuzione automatica del carico.</block>
   <block id="b72566f4d301c9dec06189b65b061300" category="inline-link">Scopri come creare un volume FlexGroup utilizzando l'API</block>
   <block id="67bdff562faa68c471571176e3844346" category="paragraph">Aprire un ambiente di lavoro ONTAP on-premise e selezionare l'opzione visualizzazione avanzata.</block>
@@ -547,7 +510,6 @@
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">Per ricevere supporto tecnico specifico di BlueXP e delle relative soluzioni e servizi storage, utilizza le opzioni di supporto descritte di seguito.</block>
   <block id="c65dc56e9af1b59f20d971d9f8ecd361" category="doc">Gestire i cluster rilevati direttamente</block>
   <block id="842394c4883838b029db28103480c404" category="doc">Gestire i cluster rilevati con un connettore</block>
-  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Quali sono le prossime novità?</block>
   <block id="9403a7672f0137bf2158d9662b27dbd0" category="section-title">Amministrare ONTAP utilizzando la visualizzazione avanzata (Gestione di sistema)</block>
   <block id="48208e085946470d7aeaad6b13dcda66" category="section-title">Utilizzare la visualizzazione avanzata</block>
   <block id="1822d12a7b10a50fdd93b84fc0c9f70e" category="doc">Scopri di più sulla gestione del cluster ONTAP on-premise in BlueXP</block>
@@ -558,4 +520,9 @@
   <block id="3293cc9f12e1fa232d9a61b0022166b9" category="list-text">L'host del connettore deve consentire le connessioni in uscita attraverso la porta 443 (HTTPS) e il cluster ONTAP deve consentire l'accesso HTTP in entrata attraverso la porta 443.</block>
   <block id="f06497cae9ab6e78fd37893cdca029bd" category="section-title">Passaggio 3: Rilevamento di un cluster</block>
   <block id="9d96bd9b544805d33ce76bcba91e4c62" category="paragraph">Scopri i tuoi cluster ONTAP on-premise da Canvas in uno dei due modi seguenti:</block>
+  <block id="9d5b3307d5a7d5905623bf21ab049bdd" category="section-title">22 aprile 2024</block>
+  <block id="2d177a5ce778fe0e6f460ac5e9449f84" category="section-title">I modelli di volume non sono più supportati</block>
+  <block id="14b1c6bd63866971a4cd695c3c2a3d80" category="paragraph">Non è più possibile creare un volume da un modello. Questa azione è stata associata al servizio di correzione BlueXP, che non è più disponibile.</block>
+  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e la licenza.</block>
+  <block id="a28aaa114e91d430f853038c9ac17766" category="list-text">*Dettagli, protezione e tag*: Immettere i dettagli sul volume, ad esempio il nome e le dimensioni, quindi scegliere un criterio istantanea.</block>
 </blocks>
