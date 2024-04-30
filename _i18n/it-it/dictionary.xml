@@ -525,4 +525,9 @@
   <block id="14b1c6bd63866971a4cd695c3c2a3d80" category="paragraph">Non è più possibile creare un volume da un modello. Questa azione è stata associata al servizio di correzione BlueXP, che non è più disponibile.</block>
   <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilizza Microsoft Entra ID come provider di identità per i servizi di autenticazione specifici per il supporto e la licenza.</block>
   <block id="a28aaa114e91d430f853038c9ac17766" category="list-text">*Dettagli, protezione e tag*: Immettere i dettagli sul volume, ad esempio il nome e le dimensioni, quindi scegliere un criterio istantanea.</block>
+  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="sidebar">Scopri i cluster ONTAP</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blog e community</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Community NetApp</block>
+  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
 </blocks>
