@@ -76,7 +76,7 @@ Se si desidera eseguire il tiering dei dati cold nel cloud, è necessario esamin
 
 +
 ** https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Scopri di più sui connettori"^]
-** https://docs.netapp.com/us-en/bluexp-setup-admin/task-managing-connectors.html["Scopri come passare da un connettore all'altro"^]
+** https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html["Scopri come passare da un connettore all'altro"^]
 ** https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Scopri di più sul tiering BlueXP"^]
 
 
