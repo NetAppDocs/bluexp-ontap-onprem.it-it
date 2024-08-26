@@ -516,7 +516,6 @@
   <block id="663060c661d21dbe1c32242cc8731f0e" category="section-title">Fase 2: Configurare l'ambiente</block>
   <block id="051ffa63d019158ee74f0c9b63be5dab" category="list-text">Dovresti aver iniziato a utilizzare BlueXP, che include l'accesso e la configurazione di un account.
 <block ref="0377f2dd7cfc90832cf86e4cdea18b27" category="inline-link-rx"></block></block>
-  <block id="3293cc9f12e1fa232d9a61b0022166b9" category="list-text">L'host del connettore deve consentire le connessioni in uscita attraverso la porta 443 (HTTPS) e il cluster ONTAP deve consentire l'accesso HTTP in entrata attraverso la porta 443.</block>
   <block id="f06497cae9ab6e78fd37893cdca029bd" category="section-title">Passaggio 3: Rilevamento di un cluster</block>
   <block id="9d96bd9b544805d33ce76bcba91e4c62" category="paragraph">Scopri i tuoi cluster ONTAP on-premise da Canvas in uno dei due modi seguenti:</block>
   <block id="9d5b3307d5a7d5905623bf21ab049bdd" category="section-title">22 aprile 2024</block>
@@ -530,4 +529,5 @@
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">Blog BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinar sul cloud</block>
   <block id="74702430dfc941eaabc5007d9e5554f6" category="list-text"><block ref="74702430dfc941eaabc5007d9e5554f6" category="inline-link-rx"></block></block>
+  <block id="3ebda767e5f86db4657a423fd661132a" category="list-text">L'host del connettore deve consentire connessioni in uscita attraverso la porta 443 (HTTPS) e il cluster ONTAP deve consentire l'accesso HTTP in entrata attraverso la porta 443 alla LIF di gestione cluster.</block>
 </blocks>

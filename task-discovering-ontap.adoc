@@ -80,7 +80,7 @@ Se si desidera eseguire il tiering dei dati cold nel cloud, è necessario esamin
 ** https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Scopri di più sul tiering BlueXP"^]
 
 
-* L'host del connettore deve consentire le connessioni in uscita attraverso la porta 443 (HTTPS) e il cluster ONTAP deve consentire l'accesso HTTP in entrata attraverso la porta 443.
+* L'host del connettore deve consentire connessioni in uscita attraverso la porta 443 (HTTPS) e il cluster ONTAP deve consentire l'accesso HTTP in entrata attraverso la porta 443 alla LIF di gestione cluster.
 +
 Se il connettore si trova nel cloud, tutte le comunicazioni in uscita sono consentite dal gruppo di sicurezza predefinito.
 
