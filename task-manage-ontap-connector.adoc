@@ -149,9 +149,9 @@ Aprire un ambiente di lavoro ONTAP on-premise e selezionare l'opzione visualizza
 
 .Fasi
 . Nella pagina Canvas, selezionare il cluster ONTAP on-premise sul quale si desidera eseguire il provisioning dei volumi.
-. In alto a destra, selezionare *passa alla visualizzazione avanzata*.
+. Nel pannello di destra, in *servizi*, individuare *System Manager* e selezionare *Apri*.
 +
-image:screenshot-advanced-view.png["Schermata di un ambiente di lavoro ONTAP on-premise che mostra l'opzione passa alla visualizzazione avanzata."]
+image:screenshot-advanced-view.png["Uno screenshot della BlueXP  Canvas che mostra l'elenco dei servizi disponibili dopo aver selezionato un ambiente di lavoro ONTAP on-premise."]
 
 . Se viene visualizzato il messaggio di conferma, leggerlo e selezionare *Chiudi*.
 . Utilizzare Gestione sistema per gestire ONTAP.

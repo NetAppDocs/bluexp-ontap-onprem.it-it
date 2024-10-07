@@ -130,7 +130,7 @@ Individuare un cluster ONTAP on-premise in BlueXP inserendo l'indirizzo IP di ge
 . Nella pagina _Discover_, inserire l'indirizzo IP di gestione del cluster e la password per l'account utente admin.
 . Se si rileva direttamente il cluster (senza un connettore), selezionare *Save the credentials* (Salva le credenziali).
 +
-Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'accesso utente BlueXP. Non vengono salvati per l'utilizzo da parte di altri utenti nell'account BlueXP.
+Se si seleziona questa opzione, non sarà necessario immettere nuovamente le credenziali ogni volta che si apre l'ambiente di lavoro. Queste credenziali sono associate solo all'accesso utente BlueXP. Non vengono salvati per essere utilizzati da nessun altro membro dell'organizzazione BlueXP .
 
 . Selezionare *Discover*.
 +
