@@ -18,11 +18,14 @@ Le limitazioni note identificano piattaforme, dispositivi o funzioni non support
 
 
 
-== Sistemi ASA r2
+== Limitazioni relative ai sistemi ASA R2
 
-Dopo aver scoperto un sistema NetApp ASA R2 e aperto l'ambiente di lavoro, verrai indirizzato direttamente a Gestione sistema.
-
+* Il rilevamento dei sistemi ASA R2 non è supportato quando si utilizza BlueXP  in modalità privata.
+* Dopo aver scoperto un sistema NetApp ASA R2 e aperto l'ambiente di lavoro, verrai indirizzato direttamente a Gestione sistema.
++
 Non sono disponibili altre opzioni di gestione con i sistemi ASA R2. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi BlueXP.
+
+
 
 https://docs.netapp.com/us-en/asa-r2/index.html["Scopri di più sui sistemi ASA R2"^]
 
