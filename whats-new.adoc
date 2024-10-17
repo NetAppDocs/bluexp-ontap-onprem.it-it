@@ -24,7 +24,7 @@ Scopri le novità della gestione dei cluster ONTAP on-premise in BlueXP.
 
 === Supporto per i sistemi ASA R2
 
-È ora possibile scoprire i sistemi NetApp ASA R2 in BlueXP  quando si utilizza BlueXP  in modalità standard o privata. Dopo aver scoperto un sistema NetApp ASA R2 e aperto l'ambiente di lavoro, verrai indirizzato direttamente a Gestione sistema.
+È ora possibile scoprire i sistemi NetApp ASA R2 in BlueXP  quando si utilizza BlueXP  in modalità standard o limitata. Dopo aver scoperto un sistema NetApp ASA R2 e aperto l'ambiente di lavoro, verrai indirizzato direttamente a Gestione sistema.
 
 Non sono disponibili altre opzioni di gestione con i sistemi ASA R2. Non è possibile utilizzare la vista Standard e non è possibile attivare i servizi BlueXP.
 
