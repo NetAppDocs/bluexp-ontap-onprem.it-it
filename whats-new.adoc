@@ -127,8 +127,6 @@ https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-direct.html[
 
 == 4 dicembre 2022
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.24 del connettore.
-
 
 
 === Un nuovo modo per scoprire i cluster ONTAP on-premise
@@ -151,8 +149,6 @@ BlueXP non supporta la creazione di volumi FlexGroup. Per creare volumi FlexGrou
 
 == 18 settembre 2022
 
-Le seguenti modifiche sono state introdotte con la versione 3.9.22 del connettore.
-
 
 
 === Nuova pagina Panoramica
@@ -174,8 +170,6 @@ image:https://raw.githubusercontent.com/NetAppDocs/bluexp-ontap-onprem/main/medi
 
 
 == 7 giugno 2022
-
-La seguente modifica è stata introdotta con la versione 3.9.19 del connettore.
 
 
 
